@@ -1,6 +1,6 @@
 ## 反馈
 
-[发送反馈](issues/new)
+[发送反馈](https://github.com/1217950746/Smile-Theme/issues/new)
 
 **图标适配原则：** 外形不会变更，内容会按照扩展名本身相关内容设计
 
