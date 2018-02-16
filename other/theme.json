@@ -1,0 +1,187 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    // 背景 #1C1F26
+    // 前景 #8991A5
+    // 默认 50  #8991A57F
+    // 线条 15 #8991A526 == #2C3039
+    // 阴影 15  #00000026
+    // 蓝色 - 链接 - #56AEFF
+    "colors": {
+        // 全局
+        "focusBorder": "#00000000",
+        "foreground": "#8991A5",
+        // 编辑器
+        "editor.foreground": "#D5D5D5",
+        "editor.background": "#1C1F26",
+        // 编辑器 - 滚动条
+        "scrollbar.shadow": "#00000000",
+        "scrollbarSlider.activeBackground": "#8991A526",
+        "scrollbarSlider.hoverBackground": "#8991A526",
+        "scrollbarSlider.background": "#8991A526",
+        // 编辑器 - 分组
+        "editorGroup.border": "#8991A526",
+        "editorGroup.background": "#00000000",
+        "editorGroup.dropBackground": "#8991A526",
+        // 编辑器 - 缩进 & 空格 & 行号
+        "editorIndentGuide.background": "#8991A526",
+        "editorWhitespace.foreground": "#8991A526",
+        "editorLineNumber.foreground": "#8991A57F",
+        "editor.lineHighlightBackground": "#8991A526",
+        "editor.lineHighlightBorder": "#8991A57F",
+        // 编辑器 - 选择
+        "editor.inactiveSelectionBackground": "#8991A57F",
+        "editor.selectionBackground": "#8991A57F",
+        "editor.selectionForeground": "#8991A5",
+        "editor.selectionHighlightBackground": "#8991A57F",
+        "selection.background": "#8991A57F",
+        "editorBracketMatch.background": "#8991A526",
+        "editorBracketMatch.border": "#8991A57F",
+        "editorCursor.background": "#8991A57F",
+        "editorCursor.foreground": "#8991A5",
+        // 编辑器 - CodeLens
+        "editorCodeLens.foreground": "#8991A57F",
+        // 编辑器 - 链接
+        "editorLink.activeForeground": "#56AEFF",
+        // 输入框
+        "input.background": "#00000000",
+        "input.border": "#8991A526",
+        "input.placeholderForeground": "#8991A57F",
+        "input.foreground": "#8991A5",
+        "inputOption.activeBorder": "#8991A57F",
+        "inputValidation.errorBackground": "#2C3039",
+        "inputValidation.errorBorder": "#ef6a5e",
+        "inputValidation.infoBackground": "#2C3039",
+        "inputValidation.infoBorder": "#60c655",
+        "inputValidation.warningBackground": "#2C3039",
+        "inputValidation.warningBorder": "#f7bf4f",
+        // 按钮
+        "button.background": "#8991A526",
+        "button.foreground": "#8991A5",
+        "button.hoverBackground": "#8991A57F",
+        "extensionButton.prominentBackground": "#8991A526",
+        "extensionButton.prominentForeground": "#8991A5",
+        "extensionButton.prominentHoverBackground": "#8991A57F",
+        "welcomePage.buttonBackground": "#8991A526",
+        "welcomePage.buttonHoverBackground": "#8991A57F",
+        // 组件
+        "widget.shadow": "#00000026",
+        "editorWidget.border": "#8991A526",
+        "editorWidget.background": "#2C3039",
+        // 组件 - 调试
+        "debugToolBar.background": "#2C3039",
+        "debugToolBar.border": "#00000000",
+        // 面板
+        "panel.background": "#1C1F26",
+        "panel.border": "#8991A526",
+        "panel.dropBackground": "#8991A526",
+        // 面板 - 标题
+        "panelTitle.activeBorder": "#00000000",
+        "panelTitle.activeForeground": "#8991A5",
+        "panelTitle.inactiveForeground": "#8991A57F",
+        // 面板 - 终端
+        "terminal.background": "#1C1F26",
+        "terminal.selectionBackground": "#8991A57F",
+        "terminal.foreground": "#8991A5",
+        "terminalCursor.background": "#8991A57F",
+        "terminalCursor.foreground": "#8991A5",
+        // 面板 - 速览
+        "peekView.border": "#8991A526",
+        "peekViewTitleLabel.foreground": "#8991A5",
+        "peekViewTitleDescription.foreground": "#8991A57F",
+        "peekViewTitle.background": "#1C1F26",
+        "peekViewEditor.background": "#1C1F26",
+        "peekViewEditor.matchHighlightBackground": "#8991A526",
+        "peekViewResult.background": "#1C1F26",
+        "peekViewResult.fileForeground": "#8991A5",
+        "peekViewResult.lineForeground": "#8991A5",
+        "peekViewResult.matchHighlightBackground": "#8991A526",
+        "peekViewResult.selectionBackground": "#8991A526",
+        "peekViewResult.selectionForeground": "#8991A5",
+        "peekViewEditorGutter.background": "#1C1F26",
+        // 面板 - 通知
+        "notification.background": "#2C3039",
+        "notification.foreground": "#8991A5",
+        "notification.errorBackground": "#ef6a5e",
+        "notification.errorForeground": "#FFFFFF",
+        "notification.infoBackground": "#60c655",
+        "notification.infoForeground": "#FFFFFF",
+        "notification.warningBackground": "#f7bf4f",
+        "notification.warningForeground": "#FFFFFF",
+        "notification.buttonBackground": "#8991A526",
+        "notification.buttonForeground": "#8991A5",
+        "notification.buttonHoverBackground": "#8991A57F",
+        // 选项卡
+        "editorGroupHeader.tabsBackground": "#1C1F26",
+        "editorGroupHeader.tabsBorder": "#8991A526",
+        "editorGroupHeader.noTabsBackground": "#1C1F26",
+        "tab.activeForeground": "#8991A5",
+        "tab.inactiveForeground": "#8991A57F",
+        "tab.unfocusedInactiveForeground": "#8991A57F",
+        "tab.unfocusedActiveForeground": "#8991A57F",
+        "tab.inactiveBackground": "#00000000",
+        "tab.activeBackground": "#00000000",
+        "tab.activeBorder": "#00000000",
+        "tab.border": "#00000000",
+        "tab.hoverBackground": "#00000000",
+        "tab.hoverBorder": "#00000000",
+        "tab.unfocusedActiveBorder": "#00000000",
+        "tab.unfocusedHoverBackground": "#00000000",
+        "tab.unfocusedHoverBorder": "#00000000",
+        // 标题栏
+        "titleBar.inactiveBackground": "#1C1F26",
+        "titleBar.activeBackground": "#1C1F26",
+        "titleBar.inactiveForeground": "#8991A5",
+        "titleBar.activeForeground": "#8991A5",
+        "titleBar.border": "#8991A526",
+        // 状态栏
+        "statusBar.background": "#1C1F26",
+        "statusBar.debuggingBackground": "#1C1F26",
+        "statusBar.noFolderBackground": "#1C1F26",
+        "statusBar.border": "#8991A526",
+        "statusBar.debuggingBorder": "#8991A526",
+        "statusBar.noFolderBorder": "#8991A526",
+        "statusBar.debuggingForeground": "#8991A5",
+        "statusBar.foreground": "#8991A5",
+        "statusBar.noFolderForeground": "#8991A5",
+        // 状态栏 - 项
+        "statusBarItem.activeBackground": "#1C1F26",
+        "statusBarItem.prominentBackground": "#1C1F26",
+        "statusBarItem.hoverBackground": "#8991A526",
+        "statusBarItem.prominentHoverBackground": "#8991A526",
+        // 资源管理器
+        "sideBar.background": "#1C1F26",
+        "sideBar.foreground": "#8991A5",
+        "sideBar.border": "#8991A526",
+        "sideBar.dropBackground": "#8991A526",
+        // 资源管理器 - 标题
+        "sideBarTitle.foreground": "#8991A5",
+        // 资源管理器 - 分组
+        "sideBarSectionHeader.background": "#8991A526",
+        "sideBarSectionHeader.foreground": "#8991A5",
+        // 资源管理器 - 列表
+        "list.activeSelectionBackground": "#8991A526",
+        "list.activeSelectionForeground": "#8991A5",
+        "list.dropBackground": "#8991A526",
+        "list.focusBackground": "#8991A526",
+        "list.focusForeground": "#8991A5",
+        "list.highlightForeground": "#8991A5",
+        "list.hoverBackground": "#8991A526",
+        "list.hoverForeground": "#8991A5",
+        "list.inactiveFocusBackground": "#8991A526",
+        "list.inactiveFocusForeground": "#8991A5",
+        "list.inactiveSelectionBackground": "#8991A526",
+        "list.inactiveSelectionForeground": "#8991A5",
+        "list.invalidItemForeground": "#8991A5",
+        // 下拉列表
+        "dropdown.background": "#00000000",
+        "dropdown.border": "#8991A526",
+        "dropdown.foreground": "#8991A5",
+        // 活动栏
+        "activityBar.background": "#1C1F26",
+        "activityBar.foreground": "#8991A5",
+        "activityBar.border": "#8991A526",
+        "activityBar.dropBackground": "#8991A526",
+        "activityBarBadge.background": "#8991A526",
+        "activityBarBadge.foreground": "#8991A5"
+    }
+}
