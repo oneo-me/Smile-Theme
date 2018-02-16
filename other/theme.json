@@ -5,7 +5,7 @@
     // 默认 50  #8991A57F
     // 线条 15 #8991A526 == #2C3039
     // 阴影 15  #00000026
-    // 蓝色 - 链接 - #56AEFF
+    // 蓝色 - 链接 - #5CA6EB
     "colors": {
         // 全局
         "focusBorder": "#00000000",
@@ -13,6 +13,12 @@
         // 编辑器
         "editor.foreground": "#D5D5D5",
         "editor.background": "#1C1F26",
+        "editorError.foreground": "#ef6a5e",
+        "editorInfo.foreground": "#60c655",
+        // 编辑器 - 搜索
+        "editor.findRangeHighlightBackground": "#8991A526",
+        "editor.findMatchHighlightBackground": "#8991A526",
+        "editor.findMatchBackground": "#8991A526",
         // 编辑器 - 滚动条
         "scrollbar.shadow": "#00000000",
         "scrollbarSlider.activeBackground": "#8991A526",
@@ -41,7 +47,24 @@
         // 编辑器 - CodeLens
         "editorCodeLens.foreground": "#8991A57F",
         // 编辑器 - 链接
-        "editorLink.activeForeground": "#56AEFF",
+        "editorLink.activeForeground": "#5CA6EB",
+        // 编辑器 - 标尺
+        "editorOverviewRuler.border": "#8991A545",
+        "editorOverviewRuler.selectionHighlightForeground": "#8991A57F",
+        "editorOverviewRuler.bracketMatchForeground": "#8991A57F",
+        "editorOverviewRuler.infoForeground": "#8991A57F",
+        "editorOverviewRuler.errorForeground": "#ef6a5e",
+        "editorOverviewRuler.findMatchForeground": "#8991A57F",
+        "editorOverviewRuler.modifiedForeground": "#5CA6EB",
+        "editorOverviewRuler.deletedForeground": "#ef6a5e",
+        "editorOverviewRuler.warningForeground": "#f7bf4f",
+        "editorOverviewRuler.addedForeground": "#60c655",
+        "editorOverviewRuler.currentContentForeground": "#60c655",
+        "editorOverviewRuler.incomingContentForeground": "#f7bf4f",
+        "editorOverviewRuler.commonContentForeground": "#8991A57F",
+        "editorOverviewRuler.rangeHighlightForeground": "#8991A57F",
+        "editorOverviewRuler.wordHighlightForeground": "#8991A57F",
+        "editorOverviewRuler.wordHighlightStrongForeground": "#8991A57F",
         // 输入框
         "input.background": "#00000000",
         "input.border": "#8991A526",
@@ -119,13 +142,13 @@
         "tab.unfocusedInactiveForeground": "#8991A57F",
         "tab.unfocusedActiveForeground": "#8991A57F",
         "tab.inactiveBackground": "#00000000",
-        "tab.activeBackground": "#00000000",
+        "tab.activeBackground": "#8991A513",
         "tab.activeBorder": "#00000000",
-        "tab.border": "#00000000",
-        "tab.hoverBackground": "#00000000",
+        "tab.border": "#8991A526",
+        "tab.hoverBackground": "#8991A509",
         "tab.hoverBorder": "#00000000",
         "tab.unfocusedActiveBorder": "#00000000",
-        "tab.unfocusedHoverBackground": "#00000000",
+        "tab.unfocusedHoverBackground": "#8991A509",
         "tab.unfocusedHoverBorder": "#00000000",
         // 标题栏
         "titleBar.inactiveBackground": "#1C1F26",
@@ -181,7 +204,22 @@
         "activityBar.foreground": "#8991A5",
         "activityBar.border": "#8991A526",
         "activityBar.dropBackground": "#8991A526",
-        "activityBarBadge.background": "#8991A526",
-        "activityBarBadge.foreground": "#8991A5"
+        "activityBarBadge.background": "#2C3039",
+        "activityBarBadge.foreground": "#8991A5",
+        // Diff
+        "diffEditor.insertedTextBackground": "#60c65526",
+        "diffEditor.insertedTextBorder": "#60c6557F",
+        "diffEditor.removedTextBackground": "#ef6a5e26",
+        "diffEditor.removedTextBorder": "#ef6a5e7F",
+        // GIT 资源
+        "gitDecoration.deletedResourceForeground": "#ef6a5e",
+        "gitDecoration.modifiedResourceForeground": "#f7bf4f",
+        "gitDecoration.ignoredResourceForeground": "#8991A57F",
+        "gitDecoration.submoduleResourceForeground": "#5CA6EB",
+        "gitDecoration.untrackedResourceForeground": "#60c655",
+        "gitDecoration.conflictingResourceForeground": "#ef6a5e",
+        // Badge
+        "badge.background": "#8991A526",
+        "badge.foreground": "#8991A5"
     }
 }
