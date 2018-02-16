@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "启动扩展",
+            "type": "extensionHost",
+            "request": "launch",
+            "runtimeExecutable": "${execPath}",
+            "args": ["${workspaceRoot}/examples/examples.code-workspace", "--extensionDevelopmentPath=${workspaceRoot}"],
+            "preLaunchTask": "build"
+        }
+    ]
+}
