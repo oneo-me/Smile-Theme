@@ -20,9 +20,9 @@ type Colors struct {
 // GenTheme 生成主题
 func GenTheme(filename string, dark bool, colors Colors) {
 	// 每次编译都要抓取 VSCode 默认的代码配色
-	// 为什么抓去默认的？
+	// 为什么抓取默认的？
 	// 自己一个个实现很麻烦，VSCode 默认的配色已经很完美了
-	// 抓去的也只是配色方案，实际颜色也可以通过很简单的方式给替换掉
+	// 抓取的也只是配色方案，实际颜色也可以通过很简单的方式给替换掉
 	var defTheme *vscode.Theme
 	if dark {
 		defTheme = vscode.GetDefaultDarkTheme()
