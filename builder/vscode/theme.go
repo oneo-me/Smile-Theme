@@ -2,6 +2,7 @@ package vscode
 
 import (
 	"path"
+	"strings"
 
 	"../file"
 )
@@ -10,7 +11,7 @@ import (
 type Theme struct {
 	Schema      string            `json:"$schema,omitempty"`
 	Colors      map[string]string `json:"colors,omitempty"`
-	TokenColors []TokenColor      `json:"tokenColors,omitempty"`
+	TokenColors []*TokenColor     `json:"tokenColors,omitempty"`
 }
 
 // GetColorsHex 获取全部界面颜色
@@ -98,9 +99,10 @@ func LoadTheme(fs ...string) *Theme {
 		t := new(Theme)
 		file.LoadJSONFile(t, f)
 		for k, v := range t.Colors {
-			r.Colors[k] = v
+			r.Colors[k] = strings.ToUpper(v)
 		}
 		for _, s := range t.TokenColors {
+			s.Settings.Foreground = strings.ToUpper(s.Settings.Foreground)
 			r.TokenColors = append(r.TokenColors, s)
 		}
 	}
