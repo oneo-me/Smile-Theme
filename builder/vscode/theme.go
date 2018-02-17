@@ -2,6 +2,7 @@ package vscode
 
 import (
 	"path"
+	"strings"
 
 	"../file"
 )
@@ -98,9 +99,10 @@ func LoadTheme(fs ...string) *Theme {
 		t := new(Theme)
 		file.LoadJSONFile(t, f)
 		for k, v := range t.Colors {
-			r.Colors[k] = v
+			r.Colors[k] = strings.ToUpper(v)
 		}
 		for _, s := range t.TokenColors {
+			s.Settings.Foreground = strings.ToUpper(s.Settings.Foreground)
 			r.TokenColors = append(r.TokenColors, s)
 		}
 	}
