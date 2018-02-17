@@ -11,7 +11,7 @@ import (
 type Theme struct {
 	Schema      string            `json:"$schema,omitempty"`
 	Colors      map[string]string `json:"colors,omitempty"`
-	TokenColors []TokenColor      `json:"tokenColors,omitempty"`
+	TokenColors []*TokenColor     `json:"tokenColors,omitempty"`
 }
 
 // GetColorsHex 获取全部界面颜色
