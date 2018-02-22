@@ -12,41 +12,65 @@ import (
 // Test 内容测试
 func Test() {
 
-	fmt.Println("🏖 ", "界面可替换颜色")
+	fmt.Println("🌃", "", "检查主题颜色是否替换")
 	{
 		fmt.Println()
-		fmt.Println(strings.Join(vscode.LoadTheme(file.Abs("./other/theme.json")).GetColorsHex(), " "))
-		fmt.Println()
-	}
-	fmt.Println("🌃 ", "暗色界面可替换代码颜色")
-	{
-		fmt.Println()
-		fmt.Println(strings.Join(vscode.GetDefaultDarkTheme().GetTokenColorsHex(), " "))
-		fmt.Println()
-	}
-	fmt.Println("🌇 ", "亮色界面可替换代码颜色")
-	{
-		fmt.Println()
-		fmt.Println(strings.Join(vscode.GetDefaultLightTheme().GetTokenColorsHex(), " "))
+		uiColors := vscode.LoadTheme(file.Abs("./other/theme.json")).GetColorsHex()
+		codeColors := vscode.GetDefaultDarkTheme().GetTokenColorsHex()
+		for _, theme := range Themes {
+			fmt.Println(theme.File)
+			for _, color := range uiColors {
+				if !theme.HasUIColor(color) {
+					fmt.Println(color)
+				}
+			}
+			for _, color := range codeColors {
+				if !theme.HasCodeColor(color) {
+					switch color {
+					case "#D4D4D4":
+						fmt.Println(color, "等同于 文本颜色_代码")
+					case "#608B4E":
+						fmt.Println(color, "注释")
+					case "#C586C0":
+						fmt.Println(color, "关键字")
+					case "#4EC9B0":
+						fmt.Println(color, "类型")
+					case "#CE9178":
+						fmt.Println(color, "字符串")
+					case "#B5CEA8":
+						fmt.Println(color, "数值")
+					case "#D7BA7D":
+						fmt.Println(color, "转义符")
+					case "#808080":
+						fmt.Println(color, "HTML标签 < >")
+					case "#D16969":
+						fmt.Println(color, "正则表达式")
+					case "#6796E6":
+						fmt.Println(color, "Markdown 列表符号")
+					case "#DCDCAA":
+						fmt.Println(color, "方法名称")
+					case "#569CD6":
+						fmt.Println(color, "方法关键字")
+					case "#9CDCFE":
+						fmt.Println(color, "变量")
+					default:
+						fmt.Println(color, "未知位置")
+					}
+				}
+			}
+		}
 		fmt.Println()
 	}
 
 	extensions := vscode.GetExtensions()
 	icons := make(map[string][]string)
-	{
-		getIcons := func(dirName string) {
-			file.Each(path.Join(file.Abs("./icons"), dirName), false, func(p string) {
-				icons[dirName] = append(icons[dirName], file.NameNotExt(p))
-			})
-		}
-		getIcons("default")
-		getIcons("languages")
-		getIcons("folders")
-		getIcons("files")
-		getIcons("extensions")
+	for _, dirName := range []string{"default", "languages", "files", "folders", "extensions"} {
+		file.Each(path.Join(file.Abs("./icons"), dirName), false, func(p string) {
+			icons[dirName] = append(icons[dirName], file.NameNotExt(p))
+		})
 	}
 
-	fmt.Println("🦁 ", "检查是否有必要的图标没有覆盖")
+	fmt.Println("🌠", "", "检查是否有必要的图标没有覆盖")
 	{
 		fmt.Println()
 
@@ -90,7 +114,7 @@ func Test() {
 		fmt.Println()
 	}
 
-	fmt.Println("🌋 ", "检查被覆盖的图标（相当于替换了语言的通用图标）")
+	fmt.Println("🏞", "", "检查被覆盖的图标（相当于替换了语言的通用图标）")
 	{
 		fmt.Println()
 
@@ -116,7 +140,7 @@ func Test() {
 		fmt.Println()
 	}
 
-	fmt.Println("🐤 ", "检查重复的图标（完全不能重复）")
+	fmt.Println("🎆", "", "检查重复的图标（完全不能重复）")
 	{
 		fmt.Println()
 
