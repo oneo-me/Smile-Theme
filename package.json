@@ -2,7 +2,7 @@
     "name": "smile-theme",
     "displayName": "Smile Theme",
     "description": "完整的主题，包括图标与界面配色",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "publisher": "oneo",
     "engines": {
         "vscode": "^1.0.0"
