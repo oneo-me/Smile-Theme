@@ -17,9 +17,8 @@ type Theme struct {
 // GetColorsHex 获取全部界面颜色
 func (t *Theme) GetColorsHex() []string {
 	r := []string{}
-	for _, v := range t.Colors {
-		if len(v) >= 7 {
-			color := v[0:7]
+	for _, color := range t.Colors {
+		if color != "#00000000" && color != "" {
 			has := false
 			for _, c := range r {
 				if c == color {
@@ -39,8 +38,8 @@ func (t *Theme) GetColorsHex() []string {
 func (t *Theme) GetTokenColorsHex() []string {
 	r := []string{}
 	for _, v := range t.TokenColors {
-		if len(v.Settings.Foreground) >= 7 {
-			color := v.Settings.Foreground[0:7]
+		color := v.Settings.Foreground
+		if color != "#00000000" && color != "" {
 			has := false
 			for _, c := range r {
 				if c == color {
