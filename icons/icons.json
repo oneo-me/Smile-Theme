@@ -1,8 +1,5 @@
 {
     "iconDefinitions": {
-        ".babelrc": {
-            "iconPath": "./extensions/.babelrc.png"
-        },
         ".git": {
             "iconPath": "./folders/.git.png"
         },
@@ -26,6 +23,9 @@
         },
         "asm": {
             "iconPath": "./extensions/asm.png"
+        },
+        "babelrc": {
+            "iconPath": "./extensions/babelrc.png"
         },
         "bat": {
             "iconPath": "./languages/bat.png"
@@ -89,6 +89,9 @@
         },
         "git-rebase": {
             "iconPath": "./languages/git-rebase.png"
+        },
+        "gitignore": {
+            "iconPath": "./extensions/gitignore.png"
         },
         "go": {
             "iconPath": "./languages/go.png"
@@ -267,6 +270,9 @@
         "vb": {
             "iconPath": "./languages/vb.png"
         },
+        "vscodeignore": {
+            "iconPath": "./extensions/vscodeignore.png"
+        },
         "vue": {
             "iconPath": "./extensions/vue.png"
         },
@@ -351,15 +357,16 @@
         "yaml": "yaml"
     },
     "fileExtensions": {
-        ".babelrc": ".babelrc",
         "7z": "7z",
         "asm": "asm",
+        "babelrc": "babelrc",
         "bmp": "bmp",
         "code-workspace": "code-workspace",
         "ejs": "ejs",
         "elm": "elm",
         "exe": "exe",
         "gif": "gif",
+        "gitignore": "gitignore",
         "gradle": "gradle",
         "hs": "hs",
         "jpeg": "jpeg",
@@ -375,6 +382,7 @@
         "sln": "sln",
         "styl": "styl",
         "svg": "svg",
+        "vscodeignore": "vscodeignore",
         "vue": "vue",
         "zip": "zip"
     },
