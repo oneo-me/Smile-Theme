@@ -36,7 +36,7 @@
         "editor.selectionHighlightBackground": "文本颜色_次要",
         "editorBracketMatch.background": "边框颜色",
         "editorBracketMatch.border": "文本颜色_次要",
-        "editorCursor.background": "文本颜色_次要",
+        "editorCursor.background": "背景颜色",
         "editorCursor.foreground": "文本颜色",
         // 编辑器 - CodeLens
         "editorCodeLens.foreground": "文本颜色_次要",
@@ -65,11 +65,11 @@
         "input.placeholderForeground": "文本颜色_次要",
         "input.foreground": "文本颜色",
         "inputOption.activeBorder": "文本颜色_次要",
-        "inputValidation.errorBackground": "边框颜色_不透明",
+        "inputValidation.errorBackground": "组件背景颜色",
         "inputValidation.errorBorder": "错误颜色",
-        "inputValidation.infoBackground": "边框颜色_不透明",
-        "inputValidation.infoBorder": "正确颜色",
-        "inputValidation.warningBackground": "边框颜色_不透明",
+        "inputValidation.infoBackground": "组件背景颜色",
+        "inputValidation.infoBorder": "边框颜色_不透明",
+        "inputValidation.warningBackground": "组件背景颜色",
         "inputValidation.warningBorder": "警告颜色",
         // 按钮
         "button.background": "边框颜色",
@@ -83,9 +83,9 @@
         // 组件
         "widget.shadow": "阴影颜色",
         "editorWidget.border": "边框颜色",
-        "editorWidget.background": "边框颜色_不透明",
+        "editorWidget.background": "组件背景颜色",
         // 组件 - 调试
-        "debugToolBar.background": "边框颜色_不透明",
+        "debugToolBar.background": "组件背景颜色",
         "debugToolBar.border": "#00000000",
         // 面板
         "panel.background": "背景颜色",
@@ -99,7 +99,7 @@
         "terminal.background": "背景颜色",
         "terminal.selectionBackground": "文本颜色_次要",
         "terminal.foreground": "文本颜色",
-        "terminalCursor.background": "文本颜色_次要",
+        "terminalCursor.background": "背景颜色",
         "terminalCursor.foreground": "文本颜色",
         // 面板 - 速览
         "peekView.border": "边框颜色",
@@ -116,7 +116,7 @@
         "peekViewResult.selectionForeground": "文本颜色",
         "peekViewEditorGutter.background": "背景颜色",
         // 面板 - 通知
-        "notification.background": "边框颜色_不透明",
+        "notification.background": "组件背景颜色",
         "notification.foreground": "文本颜色",
         "notification.errorBackground": "错误颜色",
         "notification.errorForeground": "信息文本颜色",
@@ -190,7 +190,7 @@
         "list.inactiveSelectionForeground": "文本颜色",
         "list.invalidItemForeground": "文本颜色",
         // 下拉列表
-        "dropdown.background": "背景颜色",
+        "dropdown.background": "边框颜色_不透明",
         "dropdown.border": "边框颜色",
         "dropdown.foreground": "文本颜色",
         // 活动栏
