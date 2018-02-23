@@ -46,6 +46,9 @@ func GenExamples() {
 	file.SaveFile(file.FormatJSON(`{
 		"folders": [
 			{
+				"path": ".."
+			},
+			{
 				"path": "./default"
 			},
 			{
@@ -68,7 +71,8 @@ func GenExamples() {
 				"**/.hg": false,
 				"**/CVS": false,
 				"**/.DS_Store": false
-			}
+			},
+			"terminal.integrated.cursorStyle": "block"
 		}
 	}`), path.Join(examples, "examples.code-workspace"))
 }
