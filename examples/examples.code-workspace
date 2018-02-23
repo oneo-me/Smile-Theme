@@ -1,6 +1,9 @@
 {
     "folders": [
         {
+            "path": ".."
+        },
+        {
             "path": "./default"
         },
         {
@@ -23,6 +26,7 @@
             "**/.hg": false,
             "**/CVS": false,
             "**/.DS_Store": false
-        }
+        },
+        "terminal.integrated.cursorStyle": "block"
     }
 }
