@@ -190,7 +190,7 @@
         "list.inactiveSelectionForeground": "文本颜色",
         "list.invalidItemForeground": "文本颜色",
         // 下拉列表
-        "dropdown.background": "边框颜色_不透明",
+        "dropdown.background": "组件背景颜色",
         "dropdown.border": "边框颜色",
         "dropdown.foreground": "文本颜色",
         // 活动栏
