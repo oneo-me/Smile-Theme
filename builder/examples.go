@@ -24,14 +24,16 @@ func GenExamples() {
 	file.Each(file.Abs("icons"), true, func(p string) {
 		if file.Ext(p) == "png" {
 			name := file.NameNotExt(p)
-			switch file.Name(file.Dir(p)) {
-			case "extensions":
-				file.Create(path.Join(examples, "extensions", "ext."+name))
-			case "files":
-				file.Create(path.Join(examples, "files", name))
-			case "folders":
-				if file.Ext(name) != "expanded" {
-					file.Mkdir(path.Join(examples, "folders", name))
+			if GetIconType(name) == "" {
+				switch file.Name(file.Dir(p)) {
+				case "extensions":
+					file.Create(path.Join(examples, "extensions", "ext."+name))
+				case "files":
+					file.Create(path.Join(examples, "files", name))
+				case "folders":
+					if file.Ext(name) != "expanded" {
+						file.Mkdir(path.Join(examples, "folders", name))
+					}
 				}
 			}
 		}

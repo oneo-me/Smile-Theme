@@ -1,406 +1,528 @@
 {
     "iconDefinitions": {
-        ".git": {
-            "iconPath": "./folders/.git.png"
+        "default/file": {
+            "iconPath": "default/file.png"
         },
-        ".git.expanded": {
-            "iconPath": "./folders/.git.expanded.png"
+        "default/file_light": {
+            "iconPath": "default/file_light.png"
         },
-        ".vs": {
-            "iconPath": "./folders/.vs.png"
+        "default/folder": {
+            "iconPath": "default/folder.png"
         },
-        ".vs.expanded": {
-            "iconPath": "./folders/.vs.expanded.png"
+        "default/folder.expanded": {
+            "iconPath": "default/folder.expanded.png"
         },
-        ".vscode": {
-            "iconPath": "./folders/.vscode.png"
+        "default/project": {
+            "iconPath": "default/project.png"
         },
-        ".vscode.expanded": {
-            "iconPath": "./folders/.vscode.expanded.png"
+        "default/project.expanded": {
+            "iconPath": "default/project.expanded.png"
         },
-        "7z": {
-            "iconPath": "./extensions/7z.png"
+        "extensions/7z": {
+            "iconPath": "extensions/7z.png"
         },
-        "asm": {
-            "iconPath": "./extensions/asm.png"
+        "extensions/asm": {
+            "iconPath": "extensions/asm.png"
         },
-        "babelrc": {
-            "iconPath": "./extensions/babelrc.png"
+        "extensions/babelrc": {
+            "iconPath": "extensions/babelrc.png"
         },
-        "bat": {
-            "iconPath": "./languages/bat.png"
+        "extensions/bmp": {
+            "iconPath": "extensions/bmp.png"
         },
-        "bmp": {
-            "iconPath": "./extensions/bmp.png"
+        "extensions/code-workspace": {
+            "iconPath": "extensions/code-workspace.png"
         },
-        "c": {
-            "iconPath": "./languages/c.png"
+        "extensions/dfont": {
+            "iconPath": "extensions/dfont.png"
         },
-        "clojure": {
-            "iconPath": "./languages/clojure.png"
+        "extensions/ejs": {
+            "iconPath": "extensions/ejs.png"
         },
-        "code-workspace": {
-            "iconPath": "./extensions/code-workspace.png"
+        "extensions/elm": {
+            "iconPath": "extensions/elm.png"
         },
-        "coffeescript": {
-            "iconPath": "./languages/coffeescript.png"
+        "extensions/eot": {
+            "iconPath": "extensions/eot.png"
         },
-        "cpp": {
-            "iconPath": "./languages/cpp.png"
+        "extensions/exe": {
+            "iconPath": "extensions/exe.png"
         },
-        "csharp": {
-            "iconPath": "./languages/csharp.png"
+        "extensions/fon": {
+            "iconPath": "extensions/fon.png"
         },
-        "css": {
-            "iconPath": "./languages/css.png"
+        "extensions/font": {
+            "iconPath": "extensions/font.png"
         },
-        "diff": {
-            "iconPath": "./languages/diff.png"
+        "extensions/gif": {
+            "iconPath": "extensions/gif.png"
         },
-        "dockerfile": {
-            "iconPath": "./languages/dockerfile.png"
+        "extensions/gitignore": {
+            "iconPath": "extensions/gitignore.png"
         },
-        "ejs": {
-            "iconPath": "./extensions/ejs.png"
+        "extensions/gradle": {
+            "iconPath": "extensions/gradle.png"
         },
-        "elm": {
-            "iconPath": "./extensions/elm.png"
+        "extensions/hs": {
+            "iconPath": "extensions/hs.png"
         },
-        "exe": {
-            "iconPath": "./extensions/exe.png"
+        "extensions/hs_light": {
+            "iconPath": "extensions/hs_light.png"
         },
-        "file": {
-            "iconPath": "./default/file.png"
+        "extensions/jpeg": {
+            "iconPath": "extensions/jpeg.png"
         },
-        "folder": {
-            "iconPath": "./default/folder.png"
+        "extensions/jpg": {
+            "iconPath": "extensions/jpg.png"
         },
-        "folder.expanded": {
-            "iconPath": "./default/folder.expanded.png"
+        "extensions/lhs": {
+            "iconPath": "extensions/lhs.png"
         },
-        "fsharp": {
-            "iconPath": "./languages/fsharp.png"
+        "extensions/lhs_light": {
+            "iconPath": "extensions/lhs_light.png"
         },
-        "gif": {
-            "iconPath": "./extensions/gif.png"
+        "extensions/npmignore": {
+            "iconPath": "extensions/npmignore.png"
         },
-        "git-commit": {
-            "iconPath": "./languages/git-commit.png"
+        "extensions/otc": {
+            "iconPath": "extensions/otc.png"
         },
-        "git-rebase": {
-            "iconPath": "./languages/git-rebase.png"
+        "extensions/otf": {
+            "iconPath": "extensions/otf.png"
         },
-        "gitignore": {
-            "iconPath": "./extensions/gitignore.png"
+        "extensions/png": {
+            "iconPath": "extensions/png.png"
         },
-        "go": {
-            "iconPath": "./languages/go.png"
+        "extensions/protobuf": {
+            "iconPath": "extensions/protobuf.png"
         },
-        "gradle": {
-            "iconPath": "./extensions/gradle.png"
+        "extensions/psd": {
+            "iconPath": "extensions/psd.png"
         },
-        "groovy": {
-            "iconPath": "./languages/groovy.png"
+        "extensions/rar": {
+            "iconPath": "extensions/rar.png"
         },
-        "handlebars": {
-            "iconPath": "./languages/handlebars.png"
+        "extensions/rkt": {
+            "iconPath": "extensions/rkt.png"
         },
-        "hlsl": {
-            "iconPath": "./languages/hlsl.png"
+        "extensions/sketch": {
+            "iconPath": "extensions/sketch.png"
         },
-        "hs": {
-            "iconPath": "./extensions/hs.png"
+        "extensions/sln": {
+            "iconPath": "extensions/sln.png"
         },
-        "html": {
-            "iconPath": "./languages/html.png"
+        "extensions/styl": {
+            "iconPath": "extensions/styl.png"
         },
-        "ini": {
-            "iconPath": "./languages/ini.png"
+        "extensions/svg": {
+            "iconPath": "extensions/svg.png"
         },
-        "jade": {
-            "iconPath": "./languages/jade.png"
+        "extensions/tcc": {
+            "iconPath": "extensions/tcc.png"
         },
-        "java": {
-            "iconPath": "./languages/java.png"
+        "extensions/ttc": {
+            "iconPath": "extensions/ttc.png"
         },
-        "javascript": {
-            "iconPath": "./languages/javascript.png"
+        "extensions/ttf": {
+            "iconPath": "extensions/ttf.png"
         },
-        "javascriptreact": {
-            "iconPath": "./languages/javascriptreact.png"
+        "extensions/vscodeignore": {
+            "iconPath": "extensions/vscodeignore.png"
         },
-        "jpeg": {
-            "iconPath": "./extensions/jpeg.png"
+        "extensions/vue": {
+            "iconPath": "extensions/vue.png"
         },
-        "jpg": {
-            "iconPath": "./extensions/jpg.png"
+        "extensions/woff": {
+            "iconPath": "extensions/woff.png"
         },
-        "json": {
-            "iconPath": "./languages/json.png"
+        "extensions/woff2": {
+            "iconPath": "extensions/woff2.png"
         },
-        "kotlin": {
-            "iconPath": "./languages/kotlin.png"
+        "extensions/zip": {
+            "iconPath": "extensions/zip.png"
         },
-        "less": {
-            "iconPath": "./languages/less.png"
+        "files/license": {
+            "iconPath": "files/license.png"
         },
-        "lhs": {
-            "iconPath": "./extensions/lhs.png"
+        "files/license.txt": {
+            "iconPath": "files/license.txt.png"
         },
-        "license": {
-            "iconPath": "./files/license.png"
+        "files/webpack.config.js": {
+            "iconPath": "files/webpack.config.js.png"
         },
-        "license.txt": {
-            "iconPath": "./files/license.txt.png"
+        "folders/.git": {
+            "iconPath": "folders/.git.png"
         },
-        "log": {
-            "iconPath": "./languages/log.png"
+        "folders/.git.expanded": {
+            "iconPath": "folders/.git.expanded.png"
         },
-        "lua": {
-            "iconPath": "./languages/lua.png"
+        "folders/.vs": {
+            "iconPath": "folders/.vs.png"
         },
-        "makefile": {
-            "iconPath": "./languages/makefile.png"
+        "folders/.vs.expanded": {
+            "iconPath": "folders/.vs.expanded.png"
         },
-        "markdown": {
-            "iconPath": "./languages/markdown.png"
+        "folders/.vscode": {
+            "iconPath": "folders/.vscode.png"
         },
-        "node_modules": {
-            "iconPath": "./folders/node_modules.png"
+        "folders/.vscode.expanded": {
+            "iconPath": "folders/.vscode.expanded.png"
         },
-        "node_modules.expanded": {
-            "iconPath": "./folders/node_modules.expanded.png"
+        "folders/node_modules": {
+            "iconPath": "folders/node_modules.png"
         },
-        "npmignore": {
-            "iconPath": "./extensions/npmignore.png"
+        "folders/node_modules.expanded": {
+            "iconPath": "folders/node_modules.expanded.png"
         },
-        "objective-c": {
-            "iconPath": "./languages/objective-c.png"
+        "languages/bat": {
+            "iconPath": "languages/bat.png"
         },
-        "objective-cpp": {
-            "iconPath": "./languages/objective-cpp.png"
+        "languages/c": {
+            "iconPath": "languages/c.png"
         },
-        "perl": {
-            "iconPath": "./languages/perl.png"
+        "languages/clojure": {
+            "iconPath": "languages/clojure.png"
         },
-        "perl6": {
-            "iconPath": "./languages/perl6.png"
+        "languages/coffeescript": {
+            "iconPath": "languages/coffeescript.png"
         },
-        "php": {
-            "iconPath": "./languages/php.png"
+        "languages/cpp": {
+            "iconPath": "languages/cpp.png"
         },
-        "plaintext": {
-            "iconPath": "./languages/plaintext.png"
+        "languages/csharp": {
+            "iconPath": "languages/csharp.png"
         },
-        "png": {
-            "iconPath": "./extensions/png.png"
+        "languages/css": {
+            "iconPath": "languages/css.png"
         },
-        "powershell": {
-            "iconPath": "./languages/powershell.png"
+        "languages/diff": {
+            "iconPath": "languages/diff.png"
         },
-        "project": {
-            "iconPath": "./default/project.png"
+        "languages/dockerfile": {
+            "iconPath": "languages/dockerfile.png"
         },
-        "project.expanded": {
-            "iconPath": "./default/project.expanded.png"
+        "languages/fsharp": {
+            "iconPath": "languages/fsharp.png"
         },
-        "properties": {
-            "iconPath": "./languages/properties.png"
+        "languages/git-commit": {
+            "iconPath": "languages/git-commit.png"
         },
-        "protobuf": {
-            "iconPath": "./extensions/protobuf.png"
+        "languages/git-rebase": {
+            "iconPath": "languages/git-rebase.png"
         },
-        "psd": {
-            "iconPath": "./extensions/psd.png"
+        "languages/go": {
+            "iconPath": "languages/go.png"
         },
-        "python": {
-            "iconPath": "./languages/python.png"
+        "languages/groovy": {
+            "iconPath": "languages/groovy.png"
         },
-        "r": {
-            "iconPath": "./languages/r.png"
+        "languages/handlebars": {
+            "iconPath": "languages/handlebars.png"
         },
-        "rar": {
-            "iconPath": "./extensions/rar.png"
+        "languages/hlsl": {
+            "iconPath": "languages/hlsl.png"
         },
-        "razor": {
-            "iconPath": "./languages/razor.png"
+        "languages/html": {
+            "iconPath": "languages/html.png"
         },
-        "rkt": {
-            "iconPath": "./extensions/rkt.png"
+        "languages/ini": {
+            "iconPath": "languages/ini.png"
         },
-        "ruby": {
-            "iconPath": "./languages/ruby.png"
+        "languages/jade": {
+            "iconPath": "languages/jade.png"
         },
-        "rust": {
-            "iconPath": "./languages/rust.png"
+        "languages/java": {
+            "iconPath": "languages/java.png"
         },
-        "scss": {
-            "iconPath": "./languages/scss.png"
+        "languages/java_light": {
+            "iconPath": "languages/java_light.png"
         },
-        "shaderlab": {
-            "iconPath": "./languages/shaderlab.png"
+        "languages/javascript": {
+            "iconPath": "languages/javascript.png"
         },
-        "shellscript": {
-            "iconPath": "./languages/shellscript.png"
+        "languages/javascriptreact": {
+            "iconPath": "languages/javascriptreact.png"
         },
-        "sketch": {
-            "iconPath": "./extensions/sketch.png"
+        "languages/json": {
+            "iconPath": "languages/json.png"
         },
-        "sln": {
-            "iconPath": "./extensions/sln.png"
+        "languages/kotlin": {
+            "iconPath": "languages/kotlin.png"
         },
-        "sql": {
-            "iconPath": "./languages/sql.png"
+        "languages/less": {
+            "iconPath": "languages/less.png"
         },
-        "styl": {
-            "iconPath": "./extensions/styl.png"
+        "languages/log": {
+            "iconPath": "languages/log.png"
         },
-        "svg": {
-            "iconPath": "./extensions/svg.png"
+        "languages/lua": {
+            "iconPath": "languages/lua.png"
         },
-        "swift": {
-            "iconPath": "./languages/swift.png"
+        "languages/makefile": {
+            "iconPath": "languages/makefile.png"
         },
-        "typescript": {
-            "iconPath": "./languages/typescript.png"
+        "languages/markdown": {
+            "iconPath": "languages/markdown.png"
         },
-        "typescriptreact": {
-            "iconPath": "./languages/typescriptreact.png"
+        "languages/objective-c": {
+            "iconPath": "languages/objective-c.png"
         },
-        "vb": {
-            "iconPath": "./languages/vb.png"
+        "languages/objective-cpp": {
+            "iconPath": "languages/objective-cpp.png"
         },
-        "vscodeignore": {
-            "iconPath": "./extensions/vscodeignore.png"
+        "languages/perl": {
+            "iconPath": "languages/perl.png"
         },
-        "vue": {
-            "iconPath": "./extensions/vue.png"
+        "languages/perl6": {
+            "iconPath": "languages/perl6.png"
         },
-        "webpack.config.js": {
-            "iconPath": "./files/webpack.config.js.png"
+        "languages/php": {
+            "iconPath": "languages/php.png"
         },
-        "xml": {
-            "iconPath": "./languages/xml.png"
+        "languages/plaintext": {
+            "iconPath": "languages/plaintext.png"
         },
-        "xquery": {
-            "iconPath": "./languages/xquery.png"
+        "languages/plaintext_light": {
+            "iconPath": "languages/plaintext_light.png"
         },
-        "xsl": {
-            "iconPath": "./languages/xsl.png"
+        "languages/powershell": {
+            "iconPath": "languages/powershell.png"
         },
-        "yaml": {
-            "iconPath": "./languages/yaml.png"
+        "languages/properties": {
+            "iconPath": "languages/properties.png"
         },
-        "zip": {
-            "iconPath": "./extensions/zip.png"
+        "languages/python": {
+            "iconPath": "languages/python.png"
+        },
+        "languages/r": {
+            "iconPath": "languages/r.png"
+        },
+        "languages/razor": {
+            "iconPath": "languages/razor.png"
+        },
+        "languages/ruby": {
+            "iconPath": "languages/ruby.png"
+        },
+        "languages/rust": {
+            "iconPath": "languages/rust.png"
+        },
+        "languages/scss": {
+            "iconPath": "languages/scss.png"
+        },
+        "languages/shaderlab": {
+            "iconPath": "languages/shaderlab.png"
+        },
+        "languages/shellscript": {
+            "iconPath": "languages/shellscript.png"
+        },
+        "languages/sql": {
+            "iconPath": "languages/sql.png"
+        },
+        "languages/swift": {
+            "iconPath": "languages/swift.png"
+        },
+        "languages/typescript": {
+            "iconPath": "languages/typescript.png"
+        },
+        "languages/typescriptreact": {
+            "iconPath": "languages/typescriptreact.png"
+        },
+        "languages/vb": {
+            "iconPath": "languages/vb.png"
+        },
+        "languages/xml": {
+            "iconPath": "languages/xml.png"
+        },
+        "languages/xquery": {
+            "iconPath": "languages/xquery.png"
+        },
+        "languages/xsl": {
+            "iconPath": "languages/xsl.png"
+        },
+        "languages/yaml": {
+            "iconPath": "languages/yaml.png"
         }
     },
-    "file": "file",
-    "folder": "folder",
-    "folderExpanded": "folder.expanded",
-    "rootFolder": "project",
-    "rootFolderExpanded": "project.expanded",
+    "file": "default/file",
+    "folder": "default/folder",
+    "folderExpanded": "default/folder.expanded",
+    "rootFolder": "default/project",
+    "rootFolderExpanded": "default/project.expanded",
     "languageIds": {
-        "bat": "bat",
-        "c": "c",
-        "clojure": "clojure",
-        "coffeescript": "coffeescript",
-        "cpp": "cpp",
-        "csharp": "csharp",
-        "css": "css",
-        "diff": "diff",
-        "dockerfile": "dockerfile",
-        "fsharp": "fsharp",
-        "git-commit": "git-commit",
-        "git-rebase": "git-rebase",
-        "go": "go",
-        "groovy": "groovy",
-        "handlebars": "handlebars",
-        "hlsl": "hlsl",
-        "html": "html",
-        "ini": "ini",
-        "jade": "jade",
-        "java": "java",
-        "javascript": "javascript",
-        "javascriptreact": "javascriptreact",
-        "json": "json",
-        "kotlin": "kotlin",
-        "less": "less",
-        "log": "log",
-        "lua": "lua",
-        "makefile": "makefile",
-        "markdown": "markdown",
-        "objective-c": "objective-c",
-        "objective-cpp": "objective-cpp",
-        "perl": "perl",
-        "perl6": "perl6",
-        "php": "php",
-        "plaintext": "plaintext",
-        "powershell": "powershell",
-        "properties": "properties",
-        "python": "python",
-        "r": "r",
-        "razor": "razor",
-        "ruby": "ruby",
-        "rust": "rust",
-        "scss": "scss",
-        "shaderlab": "shaderlab",
-        "shellscript": "shellscript",
-        "sql": "sql",
-        "swift": "swift",
-        "typescript": "typescript",
-        "typescriptreact": "typescriptreact",
-        "vb": "vb",
-        "xml": "xml",
-        "xquery": "xquery",
-        "xsl": "xsl",
-        "yaml": "yaml"
+        "bat": "languages/bat",
+        "c": "languages/c",
+        "clojure": "languages/clojure",
+        "coffeescript": "languages/coffeescript",
+        "cpp": "languages/cpp",
+        "csharp": "languages/csharp",
+        "css": "languages/css",
+        "diff": "languages/diff",
+        "dockerfile": "languages/dockerfile",
+        "fsharp": "languages/fsharp",
+        "git-commit": "languages/git-commit",
+        "git-rebase": "languages/git-rebase",
+        "go": "languages/go",
+        "groovy": "languages/groovy",
+        "handlebars": "languages/handlebars",
+        "hlsl": "languages/hlsl",
+        "html": "languages/html",
+        "ini": "languages/ini",
+        "jade": "languages/jade",
+        "java": "languages/java",
+        "javascript": "languages/javascript",
+        "javascriptreact": "languages/javascriptreact",
+        "json": "languages/json",
+        "kotlin": "languages/kotlin",
+        "less": "languages/less",
+        "log": "languages/log",
+        "lua": "languages/lua",
+        "makefile": "languages/makefile",
+        "markdown": "languages/markdown",
+        "objective-c": "languages/objective-c",
+        "objective-cpp": "languages/objective-cpp",
+        "perl": "languages/perl",
+        "perl6": "languages/perl6",
+        "php": "languages/php",
+        "plaintext": "languages/plaintext",
+        "powershell": "languages/powershell",
+        "properties": "languages/properties",
+        "python": "languages/python",
+        "r": "languages/r",
+        "razor": "languages/razor",
+        "ruby": "languages/ruby",
+        "rust": "languages/rust",
+        "scss": "languages/scss",
+        "shaderlab": "languages/shaderlab",
+        "shellscript": "languages/shellscript",
+        "sql": "languages/sql",
+        "swift": "languages/swift",
+        "typescript": "languages/typescript",
+        "typescriptreact": "languages/typescriptreact",
+        "vb": "languages/vb",
+        "xml": "languages/xml",
+        "xquery": "languages/xquery",
+        "xsl": "languages/xsl",
+        "yaml": "languages/yaml"
     },
     "fileExtensions": {
-        "7z": "7z",
-        "asm": "asm",
-        "babelrc": "babelrc",
-        "bmp": "bmp",
-        "code-workspace": "code-workspace",
-        "ejs": "ejs",
-        "elm": "elm",
-        "exe": "exe",
-        "gif": "gif",
-        "gitignore": "gitignore",
-        "gradle": "gradle",
-        "hs": "hs",
-        "jpeg": "jpeg",
-        "jpg": "jpg",
-        "lhs": "lhs",
-        "npmignore": "npmignore",
-        "png": "png",
-        "protobuf": "protobuf",
-        "psd": "psd",
-        "rar": "rar",
-        "rkt": "rkt",
-        "sketch": "sketch",
-        "sln": "sln",
-        "styl": "styl",
-        "svg": "svg",
-        "vscodeignore": "vscodeignore",
-        "vue": "vue",
-        "zip": "zip"
+        "7z": "extensions/7z",
+        "asm": "extensions/asm",
+        "babelrc": "extensions/babelrc",
+        "bmp": "extensions/bmp",
+        "code-workspace": "extensions/code-workspace",
+        "dfont": "extensions/dfont",
+        "ejs": "extensions/ejs",
+        "elm": "extensions/elm",
+        "eot": "extensions/eot",
+        "exe": "extensions/exe",
+        "fon": "extensions/fon",
+        "font": "extensions/font",
+        "gif": "extensions/gif",
+        "gitignore": "extensions/gitignore",
+        "gradle": "extensions/gradle",
+        "hs": "extensions/hs",
+        "jpeg": "extensions/jpeg",
+        "jpg": "extensions/jpg",
+        "lhs": "extensions/lhs",
+        "npmignore": "extensions/npmignore",
+        "otc": "extensions/otc",
+        "otf": "extensions/otf",
+        "png": "extensions/png",
+        "protobuf": "extensions/protobuf",
+        "psd": "extensions/psd",
+        "rar": "extensions/rar",
+        "rkt": "extensions/rkt",
+        "sketch": "extensions/sketch",
+        "sln": "extensions/sln",
+        "styl": "extensions/styl",
+        "svg": "extensions/svg",
+        "tcc": "extensions/tcc",
+        "ttc": "extensions/ttc",
+        "ttf": "extensions/ttf",
+        "vscodeignore": "extensions/vscodeignore",
+        "vue": "extensions/vue",
+        "woff": "extensions/woff",
+        "woff2": "extensions/woff2",
+        "zip": "extensions/zip"
     },
     "fileNames": {
-        "license": "license",
-        "license.txt": "license.txt",
-        "webpack.config.js": "webpack.config.js"
+        "license": "files/license",
+        "license.txt": "files/license.txt",
+        "webpack.config.js": "files/webpack.config.js"
     },
     "folderNames": {
-        ".git": ".git",
-        ".vs": ".vs",
-        ".vscode": ".vscode",
-        "node_modules": "node_modules"
+        ".git": "folders/.git",
+        ".vs": "folders/.vs",
+        ".vscode": "folders/.vscode",
+        "node_modules": "folders/node_modules"
     },
     "folderNamesExpanded": {
-        ".git": ".git.expanded",
-        ".vs": ".vs.expanded",
-        ".vscode": ".vscode.expanded",
-        "node_modules": "node_modules.expanded"
+        ".git": "folders/.git.expanded",
+        ".vs": "folders/.vs.expanded",
+        ".vscode": "folders/.vscode.expanded",
+        "node_modules": "folders/node_modules.expanded"
+    },
+    "light": {
+        "file": "default/file_light",
+        "languageIds": {
+            "bat": "languages/bat",
+            "c": "languages/c",
+            "clojure": "languages/clojure",
+            "coffeescript": "languages/coffeescript",
+            "cpp": "languages/cpp",
+            "csharp": "languages/csharp",
+            "css": "languages/css",
+            "diff": "languages/diff",
+            "dockerfile": "languages/dockerfile",
+            "fsharp": "languages/fsharp",
+            "git-commit": "languages/git-commit",
+            "git-rebase": "languages/git-rebase",
+            "go": "languages/go",
+            "groovy": "languages/groovy",
+            "handlebars": "languages/handlebars",
+            "hlsl": "languages/hlsl",
+            "html": "languages/html",
+            "ini": "languages/ini",
+            "jade": "languages/jade",
+            "java": "languages/java_light",
+            "javascript": "languages/javascript",
+            "javascriptreact": "languages/javascriptreact",
+            "json": "languages/json",
+            "kotlin": "languages/kotlin",
+            "less": "languages/less",
+            "log": "languages/log",
+            "lua": "languages/lua",
+            "makefile": "languages/makefile",
+            "markdown": "languages/markdown",
+            "objective-c": "languages/objective-c",
+            "objective-cpp": "languages/objective-cpp",
+            "perl": "languages/perl",
+            "perl6": "languages/perl6",
+            "php": "languages/php",
+            "plaintext": "languages/plaintext_light",
+            "powershell": "languages/powershell",
+            "properties": "languages/properties",
+            "python": "languages/python",
+            "r": "languages/r",
+            "razor": "languages/razor",
+            "ruby": "languages/ruby",
+            "rust": "languages/rust",
+            "scss": "languages/scss",
+            "shaderlab": "languages/shaderlab",
+            "shellscript": "languages/shellscript",
+            "sql": "languages/sql",
+            "swift": "languages/swift",
+            "typescript": "languages/typescript",
+            "typescriptreact": "languages/typescriptreact",
+            "vb": "languages/vb",
+            "xml": "languages/xml",
+            "xquery": "languages/xquery",
+            "xsl": "languages/xsl",
+            "yaml": "languages/yaml"
+        },
+        "fileExtensions": {
+            "hs": "extensions/hs_light",
+            "lhs": "extensions/lhs_light"
+        }
     }
 }
