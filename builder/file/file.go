@@ -21,7 +21,7 @@ func Ext(p string) string {
 
 // NameNotExt 获取名称，不包含扩展名
 func NameNotExt(p string) string {
-	return strings.Replace(Name(p), "."+Ext(p), "", 1)
+	return strings.Replace(Name(p), filepath.Ext(p), "", 1)
 }
 
 // Abs 获取绝对路径

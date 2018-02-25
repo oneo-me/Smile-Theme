@@ -139,33 +139,4 @@ func Test() {
 
 		fmt.Println()
 	}
-
-	fmt.Println("🎆", "", "检查重复的图标（完全不能重复）")
-	{
-		fmt.Println()
-
-		// 文件名 => 目录
-		errorIcons := make(map[string][]string)
-
-		for k, ns := range icons {
-			for _, n := range ns {
-				for ck, cns := range icons {
-					if ck != k {
-						for _, cn := range cns {
-							if cn == n {
-								errorIcons[n] = append(errorIcons[n], ck)
-							}
-						}
-					}
-				}
-			}
-		}
-		for k, vs := range errorIcons {
-			fmt.Println(k + ".png")
-			fmt.Println(strings.Join(vs, " "))
-			fmt.Println()
-		}
-
-		fmt.Println()
-	}
 }
