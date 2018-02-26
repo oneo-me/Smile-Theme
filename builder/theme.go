@@ -145,6 +145,7 @@ func GenThemes() {
 			}
 		}
 		// 保存
+		file.Mkdir(file.Abs("./themes"))
 		file.SaveJSONFile(templateTheme, path.Join(file.Abs("./themes"), theme.File))
 	}
 }
