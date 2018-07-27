@@ -4,12 +4,12 @@
     "tasks": [
         {
             "label": "build",
-            "command": "clear && go",
+            "command": "go",
             "args": ["run", "builder/*.go"]
         },
         {
             "label": "test",
-            "command": "clear && go",
+            "command": "go",
             "args": ["run", "builder/*.go", "test"]
         }
     ]

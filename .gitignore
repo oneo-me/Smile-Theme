@@ -1,3 +1,4 @@
 examples/**
 themes/**
 icons/icons.json
+.DS_Store
