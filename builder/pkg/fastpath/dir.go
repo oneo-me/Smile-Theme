@@ -35,7 +35,7 @@ func GetDirs(dir string) []string {
 		if err == nil {
 			for _, info := range infos {
 				if info.IsDir() {
-					dirs = append(dirs, Join(dir, info.Name()))
+					dirs = append(dirs, filepath.Join(dir, info.Name()))
 				}
 			}
 		}
@@ -52,7 +52,7 @@ func GetFiles(dir string) []string {
 		if err == nil {
 			for _, info := range infos {
 				if !info.IsDir() {
-					files = append(files, Join(dir, info.Name()))
+					files = append(files, filepath.Join(dir, info.Name()))
 				}
 			}
 		}

@@ -3,15 +3,9 @@ package fastpath
 import (
 	"io/ioutil"
 	"os"
-	"path"
 	"path/filepath"
 	"strings"
 )
-
-// Join 连接路径
-func Join(elem ...string) string {
-	return path.Join(elem...)
-}
 
 // Delete 删除文件或目录
 func Delete(p string) error {

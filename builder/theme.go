@@ -1,5 +1,16 @@
 package main
 
+import (
+	"path"
+)
+
+import (
+	"fmt"
+
+	"./pkg/fastjson"
+	"./pkg/fastpath"
+)
+
 // SmileColors 简化的配色
 type SmileColors struct {
 	Background string
@@ -32,5 +43,17 @@ type SmileTheme struct {
 
 // GenThemes 生成主题
 func GenThemes() {
-
+	themes := path.Join(src, "themes")
+	fastpath.ForEach(themes, false, func(file string, isFile bool) bool {
+		if isFile {
+			println(file)
+			theme := SmileTheme{}
+			if err := fastjson.LoadFile(file, &theme); err != nil {
+				panic(err)
+			}
+			fastjson.Save(file, theme, true)
+			fmt.Println(theme)
+		}
+		return false
+	})
 }
