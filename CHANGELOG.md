@@ -1,1 +1,0 @@
-[前往 Github 查看更新日志](https://github.com/1217950746/Smile-Theme/releases)

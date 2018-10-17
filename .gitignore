@@ -1,4 +1,5 @@
-examples/**
-themes/**
-icons/icons.json
+public/**
+
+# 临时文件
 .DS_Store
+Thumbs.db

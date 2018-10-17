@@ -6,8 +6,11 @@
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["${workspaceRoot}/examples/examples.code-workspace", "--extensionDevelopmentPath=${workspaceRoot}"],
-            "preLaunchTask": "build"
+            "args": [
+                "${workspaceRoot}/examples/examples.code-workspace",
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            "preLaunchTask": "run"
         }
     ]
 }

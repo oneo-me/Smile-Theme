@@ -3,14 +3,22 @@
     "type": "shell",
     "tasks": [
         {
-            "label": "build",
+            "label": "run",
             "command": "go",
-            "args": ["run", "builder/*.go"]
+            "args": [
+                "run",
+                "builder/*.go",
+                "run"
+            ]
         },
         {
-            "label": "test",
+            "label": "build",
             "command": "go",
-            "args": ["run", "builder/*.go", "test"]
+            "args": [
+                "run",
+                "builder/*.go",
+                "build"
+            ]
         }
     ]
 }
