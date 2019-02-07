@@ -8,7 +8,7 @@ import (
 func GenBase() {
 	for _, name := range []string{
 		"icons", "previews",
-		"icon.png", "preview.png", "README.png",
+		"icon.png", "preview.png", "README.md",
 	} {
 		if err := fastpath.Copy(fastpath.Join(src, name), fastpath.Join(public, name)); err != nil {
 			panic(err)
