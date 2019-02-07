@@ -7,8 +7,8 @@ import (
 import (
 	"fmt"
 
-	"./pkg/fastjson"
-	"./pkg/fastpath"
+	"github.com/1217950746/fastjson"
+	"github.com/1217950746/fastpath"
 )
 
 // SmileColors 简化的配色

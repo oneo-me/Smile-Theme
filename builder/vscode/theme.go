@@ -4,7 +4,7 @@ import (
 	"path"
 	"strings"
 
-	"../file"
+	"github.com/1217950746/fastjson"
 )
 
 // Theme 主题
@@ -96,7 +96,7 @@ func LoadTheme(fs ...string) *Theme {
 	r := NewTheme()
 	for _, f := range fs {
 		t := new(Theme)
-		file.LoadJSONFile(t, f)
+		fastjson.LoadFile(f, t)
 		for k, v := range t.Colors {
 			r.Colors[k] = strings.ToUpper(v)
 		}

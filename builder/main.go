@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"path"
-	"path/filepath"
 
-	"./pkg/fastjson"
+	"github.com/1217950746/fastjson"
+	"github.com/1217950746/fastpath"
 )
 
 var (
@@ -14,27 +15,35 @@ var (
 )
 
 func main() {
-	src, err := filepath.Abs("./")
+	current, err := fastpath.Abs("..")
 	if err != nil {
 		panic(err)
 	}
-	public = filepath.Join(src, "public")
-	println(src)
-	println(public)
+	src = current
+	public = fastpath.Join(current, "public")
+	if err := fastpath.Delete(public); err != nil {
+		panic(err)
+	}
+	if err := fastpath.Create(public); err != nil {
+		panic(err)
+	}
 
-	info.Name = "smile-theme"
-	info.DisplayName = "Smile Theme"
-	info.Description = "漂亮的图标与代码配色"
-	info.Version = "1.28.1"
+	fmt.Println("生成基本信息...")
+	GenInfo()
 
-	// 检测图标覆盖率
-	// 检测主题覆盖率
-	// 生成图标
-	// 生成主题
-	GenThemes()
-	// 生成预览图
-	// 复制必要的文件
-	// build 模式，构建插件
+	fmt.Println("检测图标覆盖率...")
 
+	fmt.Println("检测主题覆盖率...")
+
+	fmt.Println("生成图标...")
+
+	fmt.Println("生成主题...")
+
+	fmt.Println("生成预览图...")
+
+	fmt.Println("生成必要的内容...")
+	GenBase()
+
+	fmt.Println("生成信息文件...")
 	fastjson.Save(path.Join(public, "package.json"), info, true)
 }
