@@ -1,8 +1,8 @@
 package vscode
 
-import "path"
+import "github.com/1217950746/fastpath"
 
-// GetDir 获取 VSCode 的目录
+// GetDir 获取 VSCode 下的目录
 func GetDir(p string) string {
-	return path.Join(dir, p)
+	return fastpath.Join(getVSCode(), p)
 }

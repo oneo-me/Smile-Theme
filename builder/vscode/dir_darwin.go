@@ -1,3 +1,5 @@
 package vscode
 
-var dir = "/Applications/Visual Studio Code.app/Contents/Resources/app"
+func getVSCode() string {
+	return "/Applications/Visual Studio Code.app/Contents/Resources/app"
+}
