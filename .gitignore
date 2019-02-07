@@ -1,5 +1,7 @@
-public/**
+/public
+/public.zip
 
-# 临时文件
+/builder/vendor
+go.sum
 .DS_Store
 Thumbs.db
