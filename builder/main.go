@@ -32,14 +32,19 @@ func main() {
 	GenInfo()
 
 	fmt.Println("检测图标覆盖率...")
+	CheckIcon()
 
 	fmt.Println("检测主题覆盖率...")
+	CheckTheme()
 
 	fmt.Println("生成图标...")
+	GenIcon()
 
 	fmt.Println("生成主题...")
+	GenTheme()
 
 	fmt.Println("生成预览图...")
+	GenPreview()
 
 	fmt.Println("生成必要的内容...")
 	GenBase()

@@ -4,7 +4,6 @@
     "options": {
         "cwd": "builder"
     },
-    "problemMatcher": {},
     "tasks": [
         {
             "label": "run",

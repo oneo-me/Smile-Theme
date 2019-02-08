@@ -41,8 +41,8 @@ type SmileTheme struct {
 	TokenColors SmileTokenColors
 }
 
-// GenThemes 生成主题
-func GenThemes() {
+// GenTheme 生成主题
+func GenTheme() {
 	themes := path.Join(src, "themes")
 	fastpath.ForEach(themes, false, func(file string, isFile bool) bool {
 		if isFile {
