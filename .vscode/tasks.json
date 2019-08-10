@@ -1,33 +1,10 @@
 {
     "version": "2.0.0",
     "type": "shell",
-    "options": {
-        "cwd": "builder"
-    },
     "tasks": [
         {
             "label": "run",
-            "command": "go",
-            "args": [
-                "run",
-                "*.go"
-            ]
-        },
-        {
-            "label": "vendor",
-            "command": "go",
-            "args": [
-                "mod",
-                "vendor"
-            ]
-        },
-        {
-            "label": "update package",
-            "command": "go",
-            "args": [
-                "get",
-                "-u"
-            ]
+            "command": "go run . '${execPath}'"
         }
     ]
 }
