@@ -5,5 +5,5 @@ import (
 )
 
 func getAppCore(code string) string {
-	return path.Join(path.Dir(path.Dir(code)), "Resources", "app")
+	return filepath.Join(filepath.Dir(filepath.Dir(code)), "Resources", "app")
 }

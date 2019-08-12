@@ -3,7 +3,7 @@ package vscode
 import (
 	"fmt"
 	"os"
-	"path"
+	"path/filepath"
 )
 
 var root string
@@ -30,7 +30,7 @@ func Init(code string) {
 }
 
 func getCodeDir(name string) string {
-	dir := path.Join(root, name)
+	dir := filepath.Join(root, name)
 	if _, err := os.Stat(dir); err != nil {
 		panic(err)
 	}

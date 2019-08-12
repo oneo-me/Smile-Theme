@@ -2,7 +2,7 @@ package vscode
 
 import (
 	"main/builder/fast"
-	"path"
+	"path/filepath"
 	"strings"
 )
 
@@ -53,7 +53,7 @@ func loadDefTheme(ns ...string) *Theme {
 	d := getCodeDir("extensions/theme-defaults/themes")
 	ds := []string{}
 	for _, n := range ns {
-		ds = append(ds, path.Join(d, n))
+		ds = append(ds, filepath.Join(d, n))
 	}
 	return loadTheme(ds...)
 }

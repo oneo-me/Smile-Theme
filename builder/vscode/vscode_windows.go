@@ -1,7 +1,9 @@
 package vscode
 
-import "path"
+import (
+	"path/filepath"
+)
 
 func getAppCore(code string) string {
-	return path.Join(path.Dir(code), "resources", "app")
+	return filepath.Join(filepath.Dir(code), "resources", "app")
 }

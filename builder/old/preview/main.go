@@ -35,7 +35,7 @@ func main() {
 		for _, info := range infos {
 			if info.IsDir() {
 				var previewName = "preview_" + info.Name() + ".png"
-				var previewFile = path.Join(bin, previewName)
+				var previewFile = filepath.Join(bin, previewName)
 				fmt.Println("正在生成", previewName, "...")
 				if err := os.RemoveAll(previewFile); err != nil {
 					panic(err)

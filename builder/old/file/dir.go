@@ -3,7 +3,7 @@ package file
 import (
 	"io/ioutil"
 	"os"
-	"path"
+	"path/filepath"
 )
 
 // Exists 存在
@@ -19,7 +19,7 @@ func Each(dir string, includeChild bool, action func(string)) {
 	if info := Exists(dir); info != nil && info.IsDir() {
 		if files, err := ioutil.ReadDir(dir); err == nil {
 			for _, file := range files {
-				p := path.Join(dir, file.Name())
+				p := filepath.Join(dir, file.Name())
 				if file.IsDir() {
 					if includeChild {
 						Each(p, true, action)

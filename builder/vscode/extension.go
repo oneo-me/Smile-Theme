@@ -2,7 +2,7 @@ package vscode
 
 import (
 	"main/builder/fast"
-	"path"
+	"path/filepath"
 	"regexp"
 	"strings"
 )
@@ -17,7 +17,7 @@ func GetExtensions() map[string][]string {
 		if !isFile {
 			return false
 		}
-		if path.Base(f) != "package.json" {
+		if filepath.Base(f) != "package.json" {
 			return false
 		}
 		str := fast.ReadFile(f)

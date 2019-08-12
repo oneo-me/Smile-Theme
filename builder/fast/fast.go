@@ -3,7 +3,7 @@ package fast
 import (
 	"io/ioutil"
 	"os"
-	"path"
+	"path/filepath"
 )
 
 // Each 遍历路径
@@ -20,7 +20,7 @@ func Each(dir string, includeChild bool, action func(string, bool) bool) bool {
 		panic(err)
 	}
 	for _, fi := range infos {
-		p := path.Join(dir, fi.Name())
+		p := filepath.Join(dir, fi.Name())
 		if action(p, !fi.IsDir()) {
 			return true
 		}

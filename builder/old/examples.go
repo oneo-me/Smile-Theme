@@ -76,5 +76,5 @@ func GenExamples() {
 			},
 			"terminal.integrated.cursorStyle": "block"
 		}
-	}`), path.Join(examples, "examples.code-workspace"))
+	}`), filepath.Join(examples, "examples.code-workspace"))
 }
