@@ -1,7 +1,7 @@
 package vscode
 
 import (
-	"path"
+	"path/filepath"
 )
 
 func getAppCore(code string) string {
