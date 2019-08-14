@@ -1,7 +1,6 @@
 package vscode
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 )
@@ -22,11 +21,6 @@ func Init(code string) {
 		panic("获取到的路径不是目录")
 	}
 	root = vscode
-
-	// 测试
-	for k, n := range GetExtensions() {
-		fmt.Println(k+":", n)
-	}
 }
 
 func getCodeDir(name string) string {
