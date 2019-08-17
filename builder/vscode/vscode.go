@@ -1,6 +1,7 @@
 package vscode
 
 import (
+	"main/builder/log"
 	"os"
 	"path/filepath"
 )
@@ -10,15 +11,15 @@ var root string
 // Init 初始化
 func Init(code string) {
 	if root != "" {
-		panic("请不要重复初始化")
+		log.Error("请不要重复初始化")
 	}
 	vscode := getAppCore(code)
 	info, err := os.Stat(vscode)
 	if err != nil {
-		panic(err)
+		log.Error(err)
 	}
 	if !info.IsDir() {
-		panic("获取到的路径不是目录")
+		log.Error("获取到的路径不是目录")
 	}
 	root = vscode
 }
@@ -26,7 +27,7 @@ func Init(code string) {
 func getCodeDir(name string) string {
 	dir := filepath.Join(root, name)
 	if _, err := os.Stat(dir); err != nil {
-		panic(err)
+		log.Error(err)
 	}
 	return dir
 }

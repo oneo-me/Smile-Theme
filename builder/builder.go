@@ -1,7 +1,7 @@
 package builder
 
 import (
-	"fmt"
+	"main/builder/log"
 	"main/builder/vscode"
 	"os"
 )
@@ -11,9 +11,9 @@ func Run() {
 
 	// 检查参数
 	args := os.Args
-	fmt.Println("Args:", args)
+	log.Info("启动参数", args)
 	if len(args) < 2 {
-		panic("参数错误")
+		log.Error("参数错误")
 	}
 
 	// 初始化 VSCode 包

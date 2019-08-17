@@ -2,6 +2,7 @@ package fast
 
 import (
 	"io/ioutil"
+	"main/builder/log"
 	"os"
 	"path/filepath"
 )
@@ -10,14 +11,14 @@ import (
 func Each(dir string, includeChild bool, action func(string, bool) bool) bool {
 	info, err := os.Stat(dir)
 	if err != nil {
-		panic(err)
+		log.Error(err)
 	}
 	if !info.IsDir() {
-		panic("获取到的路径不是目录")
+		log.Error("获取到的路径不是目录")
 	}
 	infos, err := ioutil.ReadDir(dir)
 	if err != nil {
-		panic(err)
+		log.Error(err)
 	}
 	for _, fi := range infos {
 		p := filepath.Join(dir, fi.Name())
