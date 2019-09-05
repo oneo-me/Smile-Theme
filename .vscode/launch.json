@@ -2,16 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "调试编译器",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "program": "${workspaceFolder}",
-            "args": [
-                "${execPath}"
-            ]
-        },
-        {
             "name": "调试扩展",
             "type": "extensionHost",
             "request": "launch",
@@ -21,6 +11,16 @@
                 "--extensionDevelopmentPath=${workspaceRoot}"
             ],
             "preLaunchTask": "run"
+        },
+        {
+            "name": "调试编译器",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "args": [
+                "${execPath}"
+            ]
         }
     ]
 }
