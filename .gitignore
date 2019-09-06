@@ -1,7 +1,2 @@
-/public
-/public.zip
-
-/builder/vendor
-go.sum
 .DS_Store
 Thumbs.db
