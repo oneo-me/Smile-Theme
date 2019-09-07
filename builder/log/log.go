@@ -8,6 +8,8 @@ func Info(a ...interface{}) {
 }
 
 // Error 错误
-func Error(v interface{}) {
-	panic(v)
+func Error(err interface{}) {
+	if err != nil {
+		panic(err)
+	}
 }
