@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../"
+        }
+    ],
+    "settings": {
+        "workbench.colorTheme": "smile-light-theme",
+        "workbench.preferredLightColorTheme": "smile-light-theme",
+        "workbench.preferredDarkColorTheme": "smile-dark-theme",
+        "workbench.iconTheme": "smile-icons",
+    }
+}
