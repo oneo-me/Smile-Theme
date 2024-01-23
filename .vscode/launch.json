@@ -8,19 +8,9 @@
             "runtimeExecutable": "${execPath}",
             "args": [
                 "${workspaceRoot}/examples/examples.code-workspace",
-                "--extensionDevelopmentPath=${workspaceRoot}"
+                "--extensionDevelopmentPath=${workspaceRoot}",
+                "--disable-extensions"
             ],
-            "preLaunchTask": "run"
-        },
-        {
-            "name": "调试编译器",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "program": "${workspaceFolder}",
-            "args": [
-                "${execPath}"
-            ]
         }
     ]
 }
