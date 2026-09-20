@@ -5,10 +5,12 @@ import { metadata, output, root, source } from "./config";
 import { vscodeTheme } from "./themes";
 import { exportSketch } from "./export-sketch";
 import { generatePreview } from "./preview";
+import { renderPreviewImage } from "./preview-image";
 
 export async function build(destination = output) {
   await exportSketch();
-  await compileExtensions(destination);
+  const assets = await compileExtensions(destination);
+  await Bun.write(join(root, "preview.png"), await renderPreviewImage(assets, source));
 }
 
 export async function compileExtensions(destination = output) {
@@ -43,6 +45,7 @@ export async function compileExtensions(destination = output) {
   await Bun.write(join(destination, "vscode/icons.json"), json(vscode));
   await generatePreview(assets, destination);
   console.log(`Built ${assets.length} icon assets for VS Code → ${destination}`);
+  return assets;
 }
 
 if (import.meta.main) await build();
