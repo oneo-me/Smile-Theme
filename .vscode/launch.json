@@ -2,12 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "启动扩展",
+            "name": "Preview Smile Icons",
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["${workspaceRoot}/examples/examples.code-workspace", "--extensionDevelopmentPath=${workspaceRoot}"],
-            "preLaunchTask": "build"
+            "preLaunchTask": "Build icons",
+            "args": [
+                "${workspaceFolder}/dist/preview/smile-icons.code-workspace",
+                "--extensionDevelopmentPath=${workspaceFolder}/dist/vscode",
+                "--extensionDevelopmentPath=${workspaceFolder}/dist/preview/language-support",
+                "--disable-extensions"
+            ],
         }
     ]
 }

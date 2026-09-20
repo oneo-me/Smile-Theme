@@ -1,43 +1,22 @@
 {
-    "name": "smile-theme",
-    "displayName": "Smile Theme",
-    "description": "完整的主题，包括图标与界面配色",
-    "version": "1.2.0",
-    "publisher": "oneo",
-    "engines": {
-        "vscode": "^1.0.0"
-    },
-    "icon": "icon.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/1217950746/Smile-Theme"
-    },
-    "bugs": {
-        "url": "https://github.com/1217950746/Smile-Theme/issues",
-        "email": "oneo.me@outlook.com"
-    },
-    "categories": ["Themes"],
-    "contributes": {
-        "iconThemes": [
-            {
-                "id": "smile-icons",
-                "label": "Smile Icons",
-                "path": "./icons/icons.json"
-            }
-        ],
-        "themes": [
-            {
-                "id": "smile-dark-theme",
-                "label": "Smile Dark Theme",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark.json"
-            },
-            {
-                "id": "smile-light-theme",
-                "label": "Smile Light Theme",
-                "uiTheme": "vs",
-                "path": "./themes/light.json"
-            }
-        ]
-    }
+  "name": "smile-icons",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "bun@1.4.2",
+  "scripts": {
+    "build": "bun src/build.ts",
+    "dev": "bun src/dev.ts",
+    "export": "bun src/export-sketch.ts",
+    "check": "tsc --noEmit",
+    "test": "bun test",
+    "package:vscode": "bun src/package-vscode.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "@vscode/vsce": "^3.6.0",
+    "fflate": "^0.8.2",
+    "typescript": "^5.9.3"
+  }
 }

@@ -1,1 +1,7 @@
-examples/**
+.DS_Store
+Thumbs.db
+AGENTS.md
+node_modules/
+dist/
+*.vsix
+extension/.icons-export-*/

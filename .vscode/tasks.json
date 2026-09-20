@@ -1,16 +1,14 @@
 {
     "version": "2.0.0",
-    "type": "shell",
     "tasks": [
         {
-            "label": "build",
-            "command": "clear && go",
-            "args": ["run", "builder/*.go"]
-        },
-        {
-            "label": "test",
-            "command": "clear && go",
-            "args": ["run", "builder/*.go", "test"]
+            "label": "Build icons",
+            "type": "process",
+            "command": "bun",
+            "args": ["run", "build"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": [],
+            "group": { "kind": "build", "isDefault": true }
         }
     ]
 }
