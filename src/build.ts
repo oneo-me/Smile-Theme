@@ -9,8 +9,8 @@ import { renderPreviewImage } from "./preview-image";
 
 export async function build(destination = output) {
   await exportSketch();
-  const assets = await compileExtensions(destination);
-  await Bun.write(join(root, "preview.png"), await renderPreviewImage(assets, source));
+  await compileExtensions(destination);
+  await copyFile(join(destination, "vscode/preview.png"), join(root, "preview.png"));
 }
 
 export async function compileExtensions(destination = output) {
@@ -24,9 +24,11 @@ export async function compileExtensions(destination = output) {
     await mkdir(dirname(to), { recursive: true });
     await copyFile(join(source, asset.path), to);
   }
-  await copyFile(join(root, "LICENSE"), join(directory, "LICENSE"));
-  await Bun.write(join(directory, "README.md"), `# Smile Icons\n\nFile and folder icons for VS Code, designed in Sketch. Includes common and light icons. No color themes.\n\nSource and development guide: ${metadata.repository}\n`);
-  await copyFile(join(root, "extension/icon.png"), join(destination, "vscode/icon.png"));
+  await mkdir(join(directory, "extension"), { recursive: true });
+  for (const path of ["README.md", "README.zh-CN.md", "LICENSE", "extension/icon.png"]) {
+    await copyFile(join(root, path), join(directory, path));
+  }
+  await Bun.write(join(directory, "preview.png"), await renderPreviewImage(assets, source));
   const json = (value: unknown) => JSON.stringify(value, null, 2) + "\n";
   await Bun.write(join(destination, "vscode/package.json"), json({
     name: metadata.name,
@@ -37,15 +39,14 @@ export async function compileExtensions(destination = output) {
     license: "MIT",
     engines: { vscode: "^1.80.0" },
     categories: ["Themes"],
-    icon: "icon.png",
-    files: ["icons/**", "icons.json", "icon.png", "README.md", "LICENSE"],
+    icon: "extension/icon.png",
+    files: ["icons/**", "icons.json", "extension/icon.png", "preview.png", "README.md", "README.zh-CN.md", "LICENSE"],
     repository: { type: "git", url: metadata.repository },
     contributes: { iconThemes: [{ id: "smile-icons", label: metadata.label, path: "./icons.json" }] },
   }));
   await Bun.write(join(destination, "vscode/icons.json"), json(vscode));
   await generatePreview(assets, destination);
   console.log(`Built ${assets.length} icon assets for VS Code → ${destination}`);
-  return assets;
 }
 
 if (import.meta.main) await build();

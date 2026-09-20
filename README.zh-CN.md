@@ -12,10 +12,10 @@
 
 ## 安装
 
-按下方[参与开发](#参与开发)中的方法生成 VSIX，然后安装：
+在 VS Code 扩展面板中搜索 `oneo.smile-theme`，找到 [Smile Icons](https://marketplace.visualstudio.com/items?itemName=oneo.smile-theme) 并安装，也可以运行以下命令：
 
 ```sh
-code --install-extension dist/smile-theme-2.0.0.vsix
+code --install-extension oneo.smile-theme
 ```
 
 在 VS Code 命令面板中运行 **首选项: 文件图标主题**（Preferences: File Icon Theme），选择 **Smile Icons**。

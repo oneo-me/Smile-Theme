@@ -12,10 +12,10 @@ File and folder icons for VS Code, designed in Sketch, with light mode variants.
 
 ## Installation
 
-Build the VSIX using the [contribution instructions](#contributing) below, then install it:
+In VS Code, open the Extensions view, search for `oneo.smile-theme`, and install [Smile Icons](https://marketplace.visualstudio.com/items?itemName=oneo.smile-theme). Alternatively, run:
 
 ```sh
-code --install-extension dist/smile-theme-2.0.0.vsix
+code --install-extension oneo.smile-theme
 ```
 
 In VS Code, run **Preferences: File Icon Theme** from the Command Palette and select **Smile Icons**.

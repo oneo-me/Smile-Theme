@@ -9,7 +9,7 @@ let sketchtool: string;
 
 beforeEach(async () => {
   directory = await mkdtemp(join(tmpdir(), "smile-workflow-"));
-  for (const path of ["src", "package.json", "design.sketch", "extension", "LICENSE"]) {
+  for (const path of ["src", "package.json", "design.sketch", "extension", "LICENSE", "README.md", "README.zh-CN.md"]) {
     await cp(join(root, path), join(directory, path), { recursive: true });
   }
   await symlink(join(root, "node_modules"), join(directory, "node_modules"));
@@ -47,6 +47,7 @@ test("build exports before compilation and preserves output when export fails", 
   expect(log.indexOf("Built 104 icon assets")).toBeGreaterThan(log.indexOf("Exported 104 icons"));
   const original = await Bun.file(join(directory, "extension/icons/default/file.png")).bytes();
   const preview = await Bun.file(join(directory, "preview.png")).bytes();
+  expect(await Bun.file(join(directory, "dist/vscode/preview.png")).bytes()).toEqual(preview);
   expect(preview.subarray(0, 8)).toEqual(new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10]));
   expect(await Bun.file(join(directory, "dist/vscode/icons/languages/java.png")).bytes()).toEqual(original);
   await Bun.write(join(directory, "fail-export"), "fail");
@@ -83,6 +84,12 @@ test("dev rebuilds after atomic Sketch saves without watching its generated outp
     await Bun.sleep(1200);
     expect(builds()).toBe(2);
     expect(log.split("Exported 104 icons").length - 1).toBe(2);
+    for (const [index, path] of ["README.md", "README.zh-CN.md"].entries()) {
+      const text = await Bun.file(join(directory, path)).text() + "\nUpdated contribution guide.\n";
+      await Bun.write(join(directory, path), text);
+      await waitForBuild(3 + index);
+      expect(await Bun.file(join(directory, "dist/vscode", path)).text()).toBe(text);
+    }
   } finally {
     child.kill();
     await child.exited;
