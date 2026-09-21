@@ -1,14 +1,14 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build icons",
-            "type": "process",
-            "command": "bun",
-            "args": ["run", "build"],
-            "options": { "cwd": "${workspaceFolder}" },
-            "problemMatcher": [],
-            "group": { "kind": "build", "isDefault": true }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "bun",
+      "args": [
+        "run",
+        "build"
+      ]
+    }
+  ]
 }

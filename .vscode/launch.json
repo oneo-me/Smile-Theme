@@ -1,18 +1,18 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Preview Smile Icons",
-            "type": "extensionHost",
-            "request": "launch",
-            "runtimeExecutable": "${execPath}",
-            "preLaunchTask": "Build icons",
-            "args": [
-                "${workspaceFolder}/dist/preview/smile-icons.code-workspace",
-                "--extensionDevelopmentPath=${workspaceFolder}/dist/vscode",
-                "--extensionDevelopmentPath=${workspaceFolder}/dist/preview/language-support",
-                "--disable-extensions"
-            ],
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview Smile Icons",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "preLaunchTask": "build",
+      "args": [
+        "${workspaceFolder}/dist/preview/smile-icons.code-workspace",
+        "--extensionDevelopmentPath=${workspaceFolder}/dist/vscode",
+        "--extensionDevelopmentPath=${workspaceFolder}/dist/preview/language-support",
+        "--disable-extensions"
+      ],
+    }
+  ]
 }
