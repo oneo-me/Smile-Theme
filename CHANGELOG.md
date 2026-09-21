@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0
+
+- Add a dedicated icon for `CLAUDE.md` and `CLAUDE.local.md` files.
+- Add `.claude` folder icons for the collapsed and expanded states.
+- Add a dedicated icon for `SKILL.md` skill definitions.
+- Add a dedicated icon for `.mcp.json` MCP configurations.
+- Update the icon preview to reflect the latest artwork.
+
 ## 2.0.2
 
 - Add a dedicated icon for `skills-lock.json` files.

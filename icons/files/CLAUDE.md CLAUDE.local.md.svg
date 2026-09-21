@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CLAUDE.md CLAUDE.local.md</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFD3B8" offset="0%"></stop>
+            <stop stop-color="#D97757" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="CLAUDE.md" stroke="none" fill="none">
+        <path d="M61.5133882,3.06616131 L61.6967605,3.23223309 L68.7678283,10.3033009 C69.2366693,10.7721418 69.5000614,11.4080266 69.5000614,12.0710678 L69.5000614,43 C69.5000614,44.3807119 68.3807733,45.5 67.0000614,45.5 L17,45.5 C15.6192881,45.5 14.5,44.3807119 14.5,43 L14.5,5 C14.5,3.61928813 15.6192881,2.5 17,2.5 L59.9289936,2.5 C60.5091546,2.5 61.0685241,2.70165958 61.5133882,3.06616131 Z" id="Rectangle" stroke="url(#linearGradient-1)" stroke-width="5" fill="#4A2415" fill-rule="nonzero"></path>
+        <g id="Asterisk" stroke="#FFFFFF" stroke-width="5.6" stroke-linecap="round">
+            <line x1="46" y1="24" x2="53" y2="24"></line>
+            <line x1="44.83" y1="26.83" x2="49.78" y2="31.78"></line>
+            <line x1="42" y1="28" x2="42" y2="35"></line>
+            <line x1="39.17" y1="26.83" x2="34.22" y2="31.78"></line>
+            <line x1="38" y1="24" x2="31" y2="24"></line>
+            <line x1="39.17" y1="21.17" x2="34.22" y2="16.22"></line>
+            <line x1="42" y1="20" x2="42" y2="13"></line>
+            <line x1="44.83" y1="21.17" x2="49.78" y2="16.22"></line>
+        </g>
+    </g>
+</svg>
