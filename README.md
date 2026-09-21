@@ -32,7 +32,7 @@ bun run build          # Build the extension in dist/vscode
 bun run package:vscode # Build and package dist/smile-theme-2.0.2.vsix
 ```
 
-For development, run `bun run dev` to watch for changes, or press F5 in VS Code to build and open the icon preview workspace. Run `bun run check` and `bun test` to validate the project.
+For development, press F5 in VS Code to build and open the icon preview workspace. Run `bun run check` and `bun test` to validate the project.
 
 ### Report missing icons
 

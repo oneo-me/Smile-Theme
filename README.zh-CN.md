@@ -32,7 +32,7 @@ bun run build          # 构建扩展到 dist/vscode
 bun run package:vscode # 构建并打包 dist/smile-theme-2.0.2.vsix
 ```
 
-开发时运行 `bun run dev` 监听变更，或在 VS Code 中按 F5 构建并打开图标预览工作区。运行 `bun run check` 和 `bun test` 检查项目。
+开发时在 VS Code 中按 F5 构建并打开图标预览工作区。运行 `bun run check` 和 `bun test` 检查项目。
 
 ### 反馈缺失图标
 

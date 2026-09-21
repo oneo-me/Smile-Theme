@@ -7,7 +7,6 @@
   "packageManager": "bun@1.4.2",
   "scripts": {
     "build": "bun src/build.ts",
-    "dev": "bun src/dev.ts",
     "check": "tsc --noEmit",
     "test": "bun test",
     "package:vscode": "bun src/package-vscode.ts"
