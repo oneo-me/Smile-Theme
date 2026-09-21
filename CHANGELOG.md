@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.2
+
+- Add a dedicated icon for `skills-lock.json` files.
+- Refine the `AGENTS.md` file icon and the collapsed and expanded `.agents` folder icons.
+- Give `.vs` and `.vscode` folders separate icons, including expanded states.
+- Update the icon preview to reflect the latest artwork.
+
 ## 2.0.1
 
 - Fix stray spaces in the `.env` icon layer name so filename associations are exported correctly.
