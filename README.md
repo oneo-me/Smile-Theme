@@ -29,7 +29,7 @@ Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; fil
 ```sh
 bun install
 bun run build          # Build the extension in dist/vscode
-bun run package:vscode # Build and package dist/smile-theme-2.0.2.vsix
+bun run package:vscode # Build and package dist/smile-theme-2.1.0.vsix
 ```
 
 For development, press F5 in VS Code to build and open the icon preview workspace. Run `bun run check` and `bun test` to validate the project.

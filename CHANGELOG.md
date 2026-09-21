@@ -6,7 +6,17 @@
 - Add `.claude` folder icons for the collapsed and expanded states.
 - Add a dedicated icon for `SKILL.md` skill definitions.
 - Add a dedicated icon for `.mcp.json` MCP configurations.
-- Update the icon preview to reflect the latest artwork.
+- Add icons for WebP, AVIF, TIFF, HEIC, and HEIF images.
+- Add icons for TAR, GZ, TGZ, BZ2, XZ, ZST, JAR, and WAR archives.
+- Match Kotlin and TOML files through their `kt`, `kts`, and `toml` extensions.
+- Add a CUDA C++ language icon, and cover JSON Lines, Sass, and the `ignore` language behind files such as `.gitignore`.
+- Rename the Perl 6 icon to Raku after the language ID VS Code now reports.
+- Retune the icons that follow the editor background, including files, diffs, Java, PowerShell, shell scripts, shaders, and plain text.
+- Fix the collapsed `.vs` folder icon, which showed the expanded folder shape.
+- Halve the width of the extension logo border and inset it so the artwork keeps its full size.
+- Show the default and folder icons first in the icon preview, and update it to reflect the latest artwork.
+- Store dark mode variants under `dark/`. Shared icons must stay legible on both backgrounds, and `dark/` keeps the variants that dark themes need.
+- Remove the `bun run dev` watcher. Press F5 in VS Code to build and open the icon preview workspace.
 
 ## 2.0.2
 
