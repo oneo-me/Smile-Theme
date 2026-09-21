@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sketch</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+        <filter x="-40.9%" y="-56.2%" width="181.8%" height="212.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="6" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="sketch" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#F5DA55" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+            <g transform="translate(12, 0)">
+                <polygon id="Path-2" fill="#FDCA1A" points="0 0 12 12 42 12 50 0"></polygon>
+                <polygon id="Path-3" fill="#FDAD00" points="42 12 48 22 60 10 50 0"></polygon>
+                <polygon id="Path-4" fill="#EA6C00" points="48 22 48 36 60 48 60 10"></polygon>
+                <path d="M48,36 L60,48 L0,48 L12,36 L48,36 Z" id="Path-5" fill="#EA6C00"></path>
+                <polygon id="Path-6" fill="#FDAD00" points="0 0 0 48 12 36 12 12"></polygon>
+                <path d="M12,10 L41.0387503,10 C41.6463177,10 42.2209436,10.2761794 42.6004879,10.7506099 L49.5617376,19.452172 C49.8454385,19.8067981 50,20.2474191 50,20.7015621 L50,36 C50,37.1045695 49.1045695,38 48,38 L12,38 C10.8954305,38 10,37.1045695 10,36 L10,12 C10,10.8954305 10.8954305,10 12,10 Z" id="Rectangle-3" fill="#FEEEB7"></path>
+                <path d="M12,6 L44.2157972,6 C44.8363957,6 45.4218327,6.28809439 45.8004559,6.7798128 L53.5846587,16.8891671 C53.8539657,17.2389166 54,17.6679351 54,18.1093543 L54,36 C54,37.1045695 53.1045695,38 52,38 L12,38 C10.8954305,38 10,37.1045695 10,36 L10,8 C10,6.8954305 10.8954305,6 12,6 Z" id="Rectangle-3" fill="#FEEEB7" filter="url(#filter-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

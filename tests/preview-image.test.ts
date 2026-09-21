@@ -18,8 +18,8 @@ test("deduplicates decoded pixels and aliases, ignores light variants, and prese
   const hiddenColour = Buffer.from(pixels);
   hiddenColour[4] = 255;
   await sharp(hiddenColour, { raw }).png({ compressionLevel: 9 }).toFile(join(directory, "files/b.png"));
-  const paths = ["files/a alias.png", "files/b.png", "files/c.svg", "files/light/a.png"];
-  await Bun.write(join(directory, "files/c.svg"), '<svg xmlns="http://www.w3.org/2000/svg" width="2" height="1"><path fill="blue" d="M0 0h2v1H0z"/></svg>');
+  const paths = ["files/a alias.png", "files/b.png", "files/c.png", "files/light/a.png"];
+  await sharp({ create: { width: 2, height: 1, channels: 4, background: "blue" } }).png().toFile(join(directory, "files/c.png"));
   await sharp({ create: { width: 2, height: 1, channels: 4, background: "green" } })
     .png().toFile(join(directory, "files/light/a.png"));
   const assets = paths.map(parseAsset);

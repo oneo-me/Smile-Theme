@@ -2,7 +2,7 @@ import { readdir, stat } from "node:fs/promises";
 import { join } from "node:path";
 import { root } from "./config";
 
-// Polling detects Sketch's atomic saves without watching generated assets.
+// Polling detects atomic SVG saves without watching generated assets.
 async function fingerprint() {
   const entries: string[] = [];
   async function visit(path: string): Promise<void> {
@@ -19,7 +19,7 @@ async function fingerprint() {
       if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
     }
   }
-  for (const path of [join(root, "design.sketch"), join(root, "extension/icon.png"), join(root, "src"), join(root, "package.json"), join(root, "LICENSE"), join(root, "README.md"), join(root, "README.zh-CN.md"), join(root, "CHANGELOG.md")]) {
+  for (const path of [join(root, "icons"), join(root, "icon.svg"), join(root, "src"), join(root, "package.json"), join(root, "LICENSE"), join(root, "README.md"), join(root, "README.zh-CN.md"), join(root, "CHANGELOG.md")]) {
     await visit(path);
   }
   return entries.join("\n");
@@ -32,7 +32,7 @@ async function rebuild() {
 
 let previous = await fingerprint();
 await rebuild();
-console.log("Watching design.sketch and build sources. Reload the VS Code development window after changes.");
+console.log("Watching SVG icons and build sources. Reload the VS Code development window after changes.");
 while (true) {
   await Bun.sleep(500);
   const current = await fingerprint();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>elm</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+    </defs>
+    <g id="elm" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#41B7CF" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+            <g transform="translate(3, -3)">
+                <polygon id="Rectangle-9" stroke="none" fill="#59637A" fill-rule="evenodd" points="4 2 32 26 4 50"></polygon>
+                <polygon id="Rectangle-9" stroke="none" fill="#F9A200" fill-rule="evenodd" points="32 26 49 12 70 30 70 59"></polygon>
+                <polygon id="Rectangle-9" stroke="none" fill="#74DB00" fill-rule="evenodd" points="4 2 37 2 49 12 32 26"></polygon>
+                <line x1="35" y1="0" x2="72" y2="31" id="Path-28" stroke="#FFFFFF" stroke-width="4" fill="none"></line>
+                <line x1="49" y1="12" x2="0" y2="53" id="Path-29" stroke="#FFFFFF" stroke-width="4" fill="none"></line>
+                <line x1="4" y1="2" x2="63" y2="52" id="Path-30" stroke="#FFFFFF" stroke-width="4" fill="none"></line>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>tsbuildinfo</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+        <linearGradient x1="48.2877604%" y1="50%" x2="100%" y2="80.4592014%" id="linearGradient-3">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <path d="M42.9081865,4.76757627 L0,0 L50,0 L60,10 L60,48 L11.3432501,43.5766591 C7.90293468,43.2639032 5.43666854,40.1179876 5.95417158,36.7024676 L10,10 L10,32 C10,35.3137085 12.6862915,38 16,38 L50,38 L53.492384,17.0456958 C53.810941,15.1343538 53.1868267,13.1868267 51.8166612,11.8166612 L46.488238,6.48823799 C45.5248552,5.52485523 44.2622825,4.91803138 42.9081865,4.76757627 Z" id="path-4"></path>
+        <linearGradient x1="0%" y1="18%" x2="48.4830729%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M42.9081865,4.76757627 L0,0 L0,48 L60,48 L11.3432501,43.5766591 C7.90293468,43.2639032 5.43666854,40.1179876 5.95417158,36.7024676 L10,10 L37.5147186,10 C39.1060176,10 40.632141,10.632141 41.7573593,11.7573593 L48.2426407,18.2426407 C49.367859,19.367859 50,20.8939824 50,22.4852814 L50,38 L53.492384,17.0456958 C53.810941,15.1343538 53.1868267,13.1868267 51.8166612,11.8166612 L46.488238,6.48823799 C45.5248552,5.52485523 44.2622825,4.91803138 42.9081865,4.76757627 Z" id="path-6"></path>
+    </defs>
+    <g id="json" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#284264" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="编组" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+            <g transform="translate(12, 0)">
+                <g id="Path-10">
+                    <use fill="#97C3FF" xlink:href="#path-4"></use>
+                    <use fill-opacity="0.3" fill="url(#linearGradient-3)" xlink:href="#path-4"></use>
+                </g>
+                <g id="Path-9">
+                    <use fill="#97C3FF" xlink:href="#path-6"></use>
+                    <use fill-opacity="0.3" fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

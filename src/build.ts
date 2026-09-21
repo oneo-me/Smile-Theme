@@ -3,12 +3,11 @@ import { dirname, join } from "node:path";
 import { readCatalog } from "./catalog";
 import { metadata, output, root, source } from "./config";
 import { vscodeTheme } from "./themes";
-import { exportSketch } from "./export-sketch";
+import sharp from "sharp";
 import { generatePreview } from "./preview";
 import { renderPreviewImage } from "./preview-image";
 
 export async function build(destination = output) {
-  await exportSketch();
   await compileExtensions(destination);
   await copyFile(join(destination, "vscode/preview.png"), join(root, "preview.png"));
 }
@@ -25,15 +24,20 @@ export async function compileExtensions(destination = output) {
     await copyFile(join(source, asset.path), to);
   }
   await mkdir(join(directory, "extension"), { recursive: true });
-  for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE", "extension/icon.png"]) {
-    await copyFile(join(root, path), join(directory, path));
+  for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"]) {
+    if (path.startsWith("README")) {
+      await Bun.write(join(directory, path), (await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="extension/icon.png"'));
+    } else {
+      await copyFile(join(root, path), join(directory, path));
+    }
   }
+  await sharp(join(root, "icon.svg")).resize(512, 512).png().toFile(join(directory, "extension/icon.png"));
   await Bun.write(join(directory, "preview.png"), await renderPreviewImage(assets, source));
   const json = (value: unknown) => JSON.stringify(value, null, 2) + "\n";
   await Bun.write(join(destination, "vscode/package.json"), json({
     name: metadata.name,
     displayName: metadata.label,
-    description: "File and folder icons designed in Sketch, with light mode variants.",
+    description: "SVG file and folder icons, with light mode variants.",
     version: metadata.version,
     publisher: metadata.publisher,
     license: "MIT",

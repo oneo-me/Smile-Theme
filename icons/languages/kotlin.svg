@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>kotlin</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+        <linearGradient x1="100%" y1="48.1822448%" x2="5.12266405%" y2="48.1822461%" id="linearGradient-3">
+            <stop stop-color="#9477FF" offset="0%"></stop>
+            <stop stop-color="#51C6FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="77.0049555%" y1="100%" x2="21.7165411%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#9477FF" offset="0%"></stop>
+            <stop stop-color="#51C6FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="58.52911%" y1="100%" x2="2.19575522%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFB449" offset="0%"></stop>
+            <stop stop-color="#FF3CDF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="kotlin" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#4A4F72" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Group" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+            <g transform="translate(35, 25) rotate(-45) translate(-35, -25)translate(1, -10)">
+                <rect id="Rectangle" fill="url(#linearGradient-3)" x="0" y="0" width="34" height="70"></rect>
+                <rect id="Rectangle-7" fill="url(#linearGradient-4)" x="0" y="0" width="68" height="18"></rect>
+                <rect id="Rectangle-7" fill="url(#linearGradient-5)" x="0" y="18" width="68" height="16"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

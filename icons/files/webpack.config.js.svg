@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>webpack.config.js</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+    </defs>
+    <g id="webpack.config.js" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#89BDFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <polygon id="Path-13" fill="#000000" fill-rule="evenodd" style="mix-blend-mode: overlay;" opacity="0.3" mask="url(#mask-2)" points="41.8356164 10 30 16.5753425 30 31.0410959 41.8356164 37.6164384 54 31.0410959 54 16.5753425"></polygon>
+        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.199999988" mask="url(#mask-2)" points="3 -4.97379915e-14 42 24 81 -4.97379915e-14"></polygon>
+        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.099999994" mask="url(#mask-2)" transform="translate(42, 36) scale(1, -1) translate(-42, -36)" points="1 24 42 48 83 24"></polygon>
+    </g>
+</svg>

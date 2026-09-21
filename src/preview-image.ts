@@ -8,7 +8,7 @@ export async function renderPreviewImage(assets: Asset[], source: string): Promi
   const seen = new Set<string>();
   for (const asset of [...assets].sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)) {
     if (asset.light) continue;
-    const { data, info } = await sharp(join(source, asset.path))
+    const { data, info } = await sharp(join(source, asset.path), { density: asset.path.endsWith(".svg") ? 216 : 72 })
       .toColourspace("srgb").ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     for (let offset = 0; offset < data.length; offset += 4) {
       if (data[offset + 3] === 0) data.fill(0, offset, offset + 3);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fsharp</title>
+    <g id="fsharp" stroke="none" fill="none">
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="Rectangle" fill="#008CBF" fill-rule="nonzero"></path>
+        <g id="Group-9" stroke-width="1" fill-rule="evenodd" transform="translate(42, 24) rotate(-90) translate(-42, -24)translate(23, 4)" fill="#FFFFFF">
+            <path d="M0,19.097605 L19,1.87218581e-15 L38,19.097605 L28.4359768,19.097605 L19,9.61315463 L9.56402323,19.097605 L0,19.097605 L0,19.097605 Z M12.1941296,19.097605 L19,12.2567722 L25.8058704,19.097605 L12.1941296,19.097605 Z" id="Combined-Shape"></path>
+            <polygon id="Combined-Shape" opacity="0.800000012" transform="translate(19, 30.4512) scale(1, -1) translate(-19, -30.4512)" points="0 40 19 20.902395 38 40 28.4359768 40 19 30.5155496 9.56402323 40"></polygon>
+        </g>
+    </g>
+</svg>

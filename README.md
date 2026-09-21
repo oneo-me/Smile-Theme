@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="extension/icon.png" alt="Smile Icons" width="128" height="128">
+  <img src="icon.svg" alt="Smile Icons" width="128" height="128">
 </p>
 
 # Smile Icons
 
 English | [简体中文](README.zh-CN.md)
 
-File and folder icons for VS Code, designed in Sketch, with light mode variants. Version 2.0 includes icons only, without editor color themes.
+File and folder icons for VS Code, maintained as SVG, with light mode variants. Version 2.0 includes icons only, without editor color themes.
 
 ![Smile Icons preview](preview.png)
 
@@ -24,7 +24,9 @@ In VS Code, run **Preferences: File Icon Theme** from the Command Palette and se
 
 ### Design and develop icons
 
-Requires macOS, Sketch, and Bun 1.4.2 or later. Edit `design.sketch` to add or improve icons, following the existing page and layer naming conventions, and enable export for new icon layers. Builds automatically export icons and regenerate the transparent `preview.png`, showing unique common icons in rows of 15. Edit the Sketch source rather than the exported images, which are replaced during builds.
+Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; filenames without `.svg` declare space-separated aliases, and `light/` contains light mode variants. Categories are `default`, `extensions`, `files`, `folders`, and `languages`. Builds use these SVGs directly and regenerate the transparent `preview.png`, showing unique common icons in rows of 15.
+
+Maintain the extension logo in `icon.svg`. Packaging generates a PNG logo for the Marketplace, which does not accept SVG extension logos; Generated PNG logos live only in `dist/` and are not tracked. Builds do not require Sketch.
 
 ```sh
 bun install

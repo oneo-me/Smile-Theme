@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rkt</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+    </defs>
+    <g id="rkt" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#CB0722" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="编组" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+            <g transform="translate(19, -9)">
+                <polygon id="Path-14" stroke="none" fill="#4A70D5" fill-rule="evenodd" points="10 6 30 26 43 61 61 60 66 0"></polygon>
+                <path d="M0,5 C26,15 41,37.6666667 45,73" id="Path-13" stroke="#FFFFFF" stroke-width="6" fill="none"></path>
+                <path d="M6,67 C9.29319933,43.9476047 17.331157,31.0625486 27.3236167,24.438473" id="Path-8" stroke="#FFFFFF" stroke-width="6" fill="none"></path>
+            </g>
+        </g>
+    </g>
+</svg>

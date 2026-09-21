@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>lhs hs</title>
+    <g id="light/lhs-hs" stroke="none" fill="none">
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="Rectangle" fill="#6F56B4" fill-rule="nonzero"></path>
+        <g id="Group" stroke-width="1" fill-rule="evenodd" transform="translate(17, 6)" fill="#FFFFFF">
+            <polygon id="Rectangle-8" opacity="0.5" points="0 0 8 0 20 18 8 36 0 36 12 18"></polygon>
+            <path d="M12,0 L20,0 L44,36 L36,36 L28,24 L20,36 L12,36 L24,18 L12,0 Z" id="Combined-Shape"></path>
+            <path d="M30,11 L50,11 L50,17 L34,17 L30,11 Z M36,20 L50,20 L50,26 L40,26 L36,20 Z" id="Combined-Shape" opacity="0.799999952"></path>
+        </g>
+    </g>
+</svg>

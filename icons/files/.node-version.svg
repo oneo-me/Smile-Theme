@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>.node-version</title>
+    <defs>
+        <linearGradient x1="0%" y1="19.7957421%" x2="97.0487618%" y2="81.9999426%" id="linearGradient-1">
+            <stop stop-color="#6ABF4B" offset="0%"></stop>
+            <stop stop-color="#3F873F" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="41.8356164 10 30 16.5753425 30 31.0410959 41.8356164 37.6164384 54 31.0410959 54 16.5753425"></polygon>
+        <linearGradient x1="-19.9799097%" y1="73.9312057%" x2="66.2485597%" y2="73.9312057%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.9909614%" y1="46.0007062%" x2="45.2137491%" y2="48.2999992%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-19.9799097%" y1="73.9312057%" x2="66.2485597%" y2="73.9312057%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-7" points="22.2010608 17.5422509 64.9085178 20.3241329 64.3839579 34.3744406 20.9782335 30.9341823"></polygon>
+        <filter x="-58.0%" y="-151.5%" width="216.1%" height="403.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.18146829 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id=".node-version" stroke="none" fill="none">
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+        <clipPath id="gem-clip">
+            <use xlink:href="#path-2"></use>
+        </clipPath>
+        <use id="Path-13" fill-opacity="0.563821232" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+        <g clip-path="url(#gem-clip)">
+            <rect id="矩形" fill="url(#linearGradient-4)" fill-rule="evenodd" transform="translate(43.9247, 26.0761) rotate(-44) translate(-43.9247, -26.0761)" x="16.9246953" y="9.07607101" width="54" height="34"></rect>
+            <rect id="矩形" fill="url(#linearGradient-5)" fill-rule="evenodd" transform="translate(43.9247, 26.0761) rotate(109) translate(-43.9247, -26.0761)" x="16.9246953" y="9.07607101" width="54" height="34"></rect>
+            <g id="矩形" transform="translate(42.9434, 25.9583) rotate(56) translate(-42.9434, -25.9583)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+            </g>
+        </g>
+    </g>
+</svg>

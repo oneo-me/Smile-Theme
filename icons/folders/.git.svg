@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>.git</title>
+    <defs>
+        <rect id="path-1" x="12" y="0" width="60" height="48" rx="5"></rect>
+    </defs>
+    <g id=".git" stroke="none" fill="none">
+        <g id="Rectangle" fill-rule="evenodd">
+            <use fill="#EE6B5A" xlink:href="#path-1"></use>
+            <use fill-opacity="0.5" fill="#000000" style="mix-blend-mode: overlay;" xlink:href="#path-1"></use>
+        </g>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17" y="5" width="50" height="38" rx="2"></rect>
+        <path d="M17,0 L33.6668384,0 C35.6853432,0 37.5058762,1.21368909 38.2822236,3.07692459 L40.7181222,8.92308651 C41.4944696,10.786322 43.3150026,12.0000111 45.3335074,12.0000111 L67.0001729,12.0000111 C69.7615966,12.0000111 72.0001729,14.2385874 72.0001729,17.0000111 L72.0001729,43.0000111 C72.0001729,45.7614349 69.7615966,48.0000111 67.0001729,48.0000111 L17,48.0000111 C14.2385763,48.0000111 12,45.7614349 12,43.0000111 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="Rectangle" fill="#EE6B5A" fill-rule="nonzero"></path>
+    </g>
+</svg>

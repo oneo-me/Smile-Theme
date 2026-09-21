@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>zip rar 7z</title>
+    <defs>
+        <path d="M17,0 L59.9289936,0 C61.255076,0 62.5268456,0.526784202 63.4645275,1.46446609 L70.5355953,8.53553391 C71.4732772,9.4732158 72.0000614,10.7449854 72.0000614,12.0710678 L72.0000614,43 C72.0000614,45.7614237 69.7614851,48 67.0000614,48 L17,48 C14.2385763,48 12,45.7614237 12,43 L12,5 C12,2.23857625 14.2385763,0 17,0 Z" id="path-1"></path>
+    </defs>
+    <g id="zip-rar-7z" stroke="none" fill="none">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#70CCF5" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <rect id="Rectangle" fill="#7CD061" fill-rule="nonzero" mask="url(#mask-2)" x="12" y="32" width="60" height="16"></rect>
+        <rect id="Rectangle" fill="#FC8463" fill-rule="nonzero" mask="url(#mask-2)" x="12" y="16" width="60" height="16"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" opacity="0.799999952" mask="url(#mask-2)" x="30" y="0" width="6" height="48"></rect>
+    </g>
+</svg>

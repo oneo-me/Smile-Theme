@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>yaml</title>
+    <g id="yaml" stroke="none" fill="none">
+        <path d="M61.5133882,3.06616131 L61.6967605,3.23223309 L68.7678283,10.3033009 C69.2366693,10.7721418 69.5000614,11.4080266 69.5000614,12.0710678 L69.5000614,43 C69.5000614,44.3807119 68.3807733,45.5 67.0000614,45.5 L17,45.5 C15.6192881,45.5 14.5,44.3807119 14.5,43 L14.5,5 C14.5,3.61928813 15.6192881,2.5 17,2.5 L59.9289936,2.5 C60.5091546,2.5 61.0685241,2.70165958 61.5133882,3.06616131 Z" id="Rectangle" stroke="#FFE874" stroke-width="5" fill="#2E2809" fill-rule="nonzero"></path>
+        <g id="编组" stroke-width="1" fill-rule="evenodd" transform="translate(29, 10)" fill="#FFE874">
+            <path d="M4,8 C6.209139,8 8,6.209139 8,4 C8,1.790861 6.209139,0 4,0 C1.790861,0 0,1.790861 0,4 C0,6.209139 1.790861,8 4,8 Z M4,28 C6.209139,28 8,26.209139 8,24 C8,21.790861 6.209139,20 4,20 C1.790861,20 0,21.790861 0,24 C0,26.209139 1.790861,28 4,28 Z" id="Combined-Shape"></path>
+            <rect id="Rectangle-6" opacity="0.299999982" x="22" y="6" width="4" height="16" rx="2"></rect>
+        </g>
+    </g>
+</svg>

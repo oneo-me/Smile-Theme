@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bat shellscript</title>
+    <g id="light/bat-shellscript" stroke="none" fill="none">
+        <path d="M61.5133882,3.06616131 L61.6967605,3.23223309 L68.7678283,10.3033009 C69.2366693,10.7721418 69.5000614,11.4080266 69.5000614,12.0710678 L69.5000614,43 C69.5000614,44.3807119 68.3807733,45.5 67.0000614,45.5 L17,45.5 C15.6192881,45.5 14.5,44.3807119 14.5,43 L14.5,5 C14.5,3.61928813 15.6192881,2.5 17,2.5 L59.9289936,2.5 C60.5091546,2.5 61.0685241,2.70165958 61.5133882,3.06616131 Z" id="Rectangle" stroke-opacity="0.3" stroke="#000000" stroke-width="5" fill="#767676" fill-rule="nonzero"></path>
+        <polyline id="Path-4" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="25 12 34 18.5 25 25"></polyline>
+        <line x1="35" y1="28" x2="44" y2="28" id="Path-5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></line>
+    </g>
+</svg>

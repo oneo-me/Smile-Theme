@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="extension/icon.png" alt="Smile Icons" width="128" height="128">
+  <img src="icon.svg" alt="Smile Icons" width="128" height="128">
 </p>
 
 # Smile Icons
 
 [English](README.md) | 简体中文
 
-为 VS Code 提供文件和目录图标，使用 Sketch 设计，支持浅色模式图标。2.0 仅包含图标，不提供编辑器配色主题。
+为 VS Code 提供文件和目录图标，直接维护 SVG 源文件，支持浅色模式图标。2.0 仅包含图标，不提供编辑器配色主题。
 
 ![Smile Icons 预览](preview.png)
 
@@ -24,7 +24,9 @@ code --install-extension oneo.smile-theme
 
 ### 设计与开发
 
-需要 macOS、Sketch 和 Bun 1.4.2 或更新版本。在 `design.sketch` 中新增或完善图标，遵循现有页面与图层命名方式，并为新增图标图层配置导出格式。构建时会自动导出图标，并重新生成透明背景的 `preview.png`，通用图标去重后每行展示 15 个。请修改 Sketch 源文件，直接修改导出的图片会在构建时被覆盖。
+需要 Bun 1.4.2 或更新版本。直接编辑 `icons/<分类>/` 中的 SVG；去掉 `.svg` 的文件名用空格声明多个别名，`light/` 存放浅色变体。分类为 `default`、`extensions`、`files`、`folders` 和 `languages`。构建直接使用这些 SVG，并重新生成透明背景的 `preview.png`，通用图标去重后每行展示 15 个。
+
+扩展 Logo 维护在 `icon.svg`。扩展市场不接受 SVG Logo，因此打包时生成 PNG；生成的 PNG Logo 仅保存在 `dist/`，不纳入版本管理。构建不再依赖 Sketch。
 
 ```sh
 bun install
