@@ -29,7 +29,7 @@ Requires macOS, Sketch, and Bun 1.4.2 or later. Edit `design.sketch` to add or i
 ```sh
 bun install
 bun run build          # Build the extension in dist/vscode
-bun run package:vscode # Build and package dist/smile-theme-2.0.0.vsix
+bun run package:vscode # Build and package dist/smile-theme-2.0.1.vsix
 ```
 
 For development, run `bun run dev` to watch for changes, or press F5 in VS Code to build and open the icon preview workspace. Run `bun run check` and `bun test` to validate the project.

@@ -192,13 +192,13 @@ describe("real project integration", () => {
   test("extension includes complete bilingual guides and every local documentation asset", async () => {
     const directory = join(destination, "vscode");
     const manifest = await Bun.file(join(directory, "package.json")).json();
-    for (const path of ["README.md", "README.zh-CN.md", "LICENSE", "extension/icon.png"]) {
+    for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE", "extension/icon.png"]) {
       expect(await Bun.file(join(directory, path)).bytes()).toEqual(await Bun.file(join(root, path)).bytes());
       expect(manifest.files).toContain(path);
     }
     expect(await Bun.file(join(directory, manifest.icon)).exists()).toBe(true);
     expect(manifest.files).toContain("preview.png");
-    for (const path of ["README.md", "README.zh-CN.md"]) {
+    for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md"]) {
       const text = await Bun.file(join(directory, path)).text();
       for (const match of text.matchAll(/\]\(([^)]+)\)|src="([^"]+)"/g)) {
         const target = (match[1] ?? match[2])!;

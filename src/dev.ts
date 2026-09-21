@@ -19,7 +19,7 @@ async function fingerprint() {
       if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
     }
   }
-  for (const path of [join(root, "design.sketch"), join(root, "extension/icon.png"), join(root, "src"), join(root, "package.json"), join(root, "LICENSE"), join(root, "README.md"), join(root, "README.zh-CN.md")]) {
+  for (const path of [join(root, "design.sketch"), join(root, "extension/icon.png"), join(root, "src"), join(root, "package.json"), join(root, "LICENSE"), join(root, "README.md"), join(root, "README.zh-CN.md"), join(root, "CHANGELOG.md")]) {
     await visit(path);
   }
   return entries.join("\n");

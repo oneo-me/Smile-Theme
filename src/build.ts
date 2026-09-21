@@ -25,7 +25,7 @@ export async function compileExtensions(destination = output) {
     await copyFile(join(source, asset.path), to);
   }
   await mkdir(join(directory, "extension"), { recursive: true });
-  for (const path of ["README.md", "README.zh-CN.md", "LICENSE", "extension/icon.png"]) {
+  for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE", "extension/icon.png"]) {
     await copyFile(join(root, path), join(directory, path));
   }
   await Bun.write(join(directory, "preview.png"), await renderPreviewImage(assets, source));
@@ -40,7 +40,7 @@ export async function compileExtensions(destination = output) {
     engines: { vscode: "^1.80.0" },
     categories: ["Themes"],
     icon: "extension/icon.png",
-    files: ["icons/**", "icons.json", "extension/icon.png", "preview.png", "README.md", "README.zh-CN.md", "LICENSE"],
+    files: ["icons/**", "icons.json", "extension/icon.png", "preview.png", "README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"],
     repository: { type: "git", url: metadata.repository },
     contributes: { iconThemes: [{ id: "smile-icons", label: metadata.label, path: "./icons.json" }] },
   }));

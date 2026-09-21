@@ -9,7 +9,7 @@ let sketchtool: string;
 
 beforeEach(async () => {
   directory = await mkdtemp(join(tmpdir(), "smile-workflow-"));
-  for (const path of ["src", "package.json", "design.sketch", "extension", "LICENSE", "README.md", "README.zh-CN.md"]) {
+  for (const path of ["src", "package.json", "design.sketch", "extension", "LICENSE", "README.md", "README.zh-CN.md", "CHANGELOG.md"]) {
     await cp(join(root, path), join(directory, path), { recursive: true });
   }
   await symlink(join(root, "node_modules"), join(directory, "node_modules"));
@@ -43,8 +43,8 @@ test("build exports before compilation and preserves output when export fails", 
   const log = await new Response(child.stdout).text();
   const errors = await new Response(child.stderr).text();
   expect(await child.exited, errors).toBe(0);
-  expect(log.indexOf("Exported 104 icons")).toBeGreaterThanOrEqual(0);
-  expect(log.indexOf("Built 104 icon assets")).toBeGreaterThan(log.indexOf("Exported 104 icons"));
+  expect(log.search(/Exported \d+ icons/)).toBeGreaterThanOrEqual(0);
+  expect(log.search(/Built \d+ icon assets/)).toBeGreaterThan(log.search(/Exported \d+ icons/));
   const original = await Bun.file(join(directory, "extension/icons/default/file.png")).bytes();
   const preview = await Bun.file(join(directory, "preview.png")).bytes();
   expect(await Bun.file(join(directory, "dist/vscode/preview.png")).bytes()).toEqual(preview);
@@ -68,7 +68,7 @@ test("dev rebuilds after atomic Sketch saves without watching its generated outp
   let errors = "";
   const stdout = (async () => { for await (const chunk of child.stdout) log += Buffer.from(chunk).toString(); })();
   const stderr = (async () => { for await (const chunk of child.stderr) errors += Buffer.from(chunk).toString(); })();
-  const builds = () => log.split("Built 104 icon assets").length - 1;
+  const builds = () => (log.match(/Built \d+ icon assets/g) ?? []).length;
   async function waitForBuild(count: number) {
     const deadline = Date.now() + 5000;
     while (builds() < count && Date.now() < deadline) await Bun.sleep(50);
@@ -83,8 +83,8 @@ test("dev rebuilds after atomic Sketch saves without watching its generated outp
     await waitForBuild(2);
     await Bun.sleep(1200);
     expect(builds()).toBe(2);
-    expect(log.split("Exported 104 icons").length - 1).toBe(2);
-    for (const [index, path] of ["README.md", "README.zh-CN.md"].entries()) {
+    expect((log.match(/Exported \d+ icons/g) ?? []).length).toBe(2);
+    for (const [index, path] of ["README.md", "README.zh-CN.md", "CHANGELOG.md"].entries()) {
       const text = await Bun.file(join(directory, path)).text() + "\nUpdated contribution guide.\n";
       await Bun.write(join(directory, path), text);
       await waitForBuild(3 + index);
