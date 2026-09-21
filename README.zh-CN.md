@@ -24,7 +24,7 @@ code --install-extension oneo.smile-theme
 
 ### 设计与开发
 
-需要 Bun 1.4.2 或更新版本。直接编辑 `icons/<分类>/` 中的 SVG；去掉 `.svg` 的文件名用空格声明多个别名，`light/` 存放浅色变体。分类为 `default`、`extensions`、`files`、`folders` 和 `languages`。构建直接使用这些 SVG，并重新生成透明背景的 `preview.png`，通用图标去重后每行展示 15 个，默认图标与文件夹图标排在最前。
+需要 Bun 1.4.2 或更新版本。直接编辑 `icons/<分类>/` 中的 SVG；去掉 `.svg` 的文件名用空格声明多个别名。这些目录中的图标需在浅色与深色背景上均可辨认，`dark/` 存放需要单独处理的深色变体。分类为 `default`、`extensions`、`files`、`folders` 和 `languages`。构建直接使用这些 SVG，并重新生成透明背景的 `preview.png`，共用图标去重后每行展示 15 个，默认图标与文件夹图标排在最前。
 
 ```sh
 bun install

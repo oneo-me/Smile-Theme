@@ -1,17 +1,19 @@
 import { readdir } from "node:fs/promises";
 import { extname, join } from "node:path";
 
+// Icons outside a `dark/` folder must stay legible on light and dark backgrounds;
+// `dark/` holds dark mode variants for icons that need them.
 export const categories = ["default", "extensions", "files", "folders", "languages"] as const;
 export type Category = (typeof categories)[number];
-export type Asset = { category: Category; light: boolean; names: string[]; path: string };
+export type Asset = { category: Category; dark: boolean; names: string[]; path: string };
 export type Associations = Record<Category, Record<string, string>>;
 const defaults = ["file", "folder", "folder_expanded", "project", "project_expanded"];
 
 export function parseAsset(path: string): Asset {
   const parts = path.split("/");
   const category = parts[0] as Category;
-  const light = parts.length === 3 && parts[1] === "light";
-  if (!categories.includes(category) || (parts.length !== 2 && !light)) {
+  const dark = parts.length === 3 && parts[1] === "dark";
+  if (!categories.includes(category) || (parts.length !== 2 && !dark)) {
     throw new Error(`Invalid icon path: ${path}`);
   }
   const filename = parts.at(-1)!;
@@ -30,19 +32,19 @@ export function parseAsset(path: string): Asset {
   if (category === "folders" && names.some(name => name === "_expanded")) {
     throw new Error(`Expanded directory icon needs a directory name: ${path}`);
   }
-  return { category, light, names, path };
+  return { category, dark, names, path };
 }
 
-export function associations(assets: Asset[], light: boolean, caseInsensitivePaths = false): Associations {
+export function associations(assets: Asset[], dark: boolean, caseInsensitivePaths = false): Associations {
   const result = Object.fromEntries(categories.map(category => [category, Object.create(null)])) as Associations;
-  for (const variant of light ? [false, true] : [false]) {
+  for (const variant of dark ? [false, true] : [false]) {
     const seen = new Map<string, Asset>();
-    for (const asset of assets.filter(asset => asset.light === variant)) {
+    for (const asset of assets.filter(asset => asset.dark === variant)) {
       const exactNames = new Set<string>();
       for (const name of asset.names) {
         const key = `${asset.category}/${name.toLowerCase()}`;
         if (exactNames.has(name) || (seen.has(key) && seen.get(key) !== asset)) {
-          throw new Error(`Duplicate icon association (${variant ? "light" : "common"}): ${key}`);
+          throw new Error(`Duplicate icon association (${variant ? "dark" : "common"}): ${key}`);
         }
         exactNames.add(name);
         seen.set(key, asset);
@@ -62,9 +64,9 @@ export function validateCatalog(assets: Asset[]) {
   for (const name of ["file", "folder"]) {
     if (!common.default[name]) throw new Error(`Missing required default/${name} icon`);
   }
-  for (const asset of assets.filter(asset => asset.light)) {
+  for (const asset of assets.filter(asset => asset.dark)) {
     for (const name of asset.names) {
-      if (!common[asset.category][name]) throw new Error(`Light icon has no common fallback: ${asset.path} (${name})`);
+      if (!common[asset.category][name]) throw new Error(`Dark icon has no common fallback: ${asset.path} (${name})`);
     }
   }
 }

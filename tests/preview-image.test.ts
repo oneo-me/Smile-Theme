@@ -10,18 +10,18 @@ let directory: string;
 beforeEach(async () => { directory = await mkdtemp(join(tmpdir(), "smile-preview-image-")); });
 afterEach(async () => { await rm(directory, { recursive: true, force: true }); });
 
-test("deduplicates decoded pixels and aliases, ignores light variants, and preserves transparency", async () => {
-  await mkdir(join(directory, "files/light"), { recursive: true });
+test("deduplicates decoded pixels and aliases, ignores dark variants, and preserves transparency", async () => {
+  await mkdir(join(directory, "files/dark"), { recursive: true });
   const pixels = Buffer.from([255, 0, 0, 255, 0, 0, 0, 0]);
   const raw = { width: 2, height: 1, channels: 4 as const };
   await sharp(pixels, { raw }).png({ compressionLevel: 0 }).toFile(join(directory, "files/a alias.png"));
   const hiddenColour = Buffer.from(pixels);
   hiddenColour[4] = 255;
   await sharp(hiddenColour, { raw }).png({ compressionLevel: 9 }).toFile(join(directory, "files/b.png"));
-  const paths = ["files/a alias.png", "files/b.png", "files/c.png", "files/light/a.png"];
+  const paths = ["files/a alias.png", "files/b.png", "files/c.png", "files/dark/a.png"];
   await sharp({ create: { width: 2, height: 1, channels: 4, background: "blue" } }).png().toFile(join(directory, "files/c.png"));
   await sharp({ create: { width: 2, height: 1, channels: 4, background: "green" } })
-    .png().toFile(join(directory, "files/light/a.png"));
+    .png().toFile(join(directory, "files/dark/a.png"));
   const assets = paths.map(parseAsset);
   const preview = await renderPreviewImage(assets, directory);
   expect(await renderPreviewImage(assets.toReversed(), directory)).toEqual(preview);

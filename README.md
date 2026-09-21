@@ -24,7 +24,7 @@ In VS Code, run **Preferences: File Icon Theme** from the Command Palette and se
 
 ### Design and develop icons
 
-Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; filenames without `.svg` declare space-separated aliases, and `light/` contains light mode variants. Categories are `default`, `extensions`, `files`, `folders`, and `languages`. Builds use these SVGs directly and regenerate the transparent `preview.png`, showing unique common icons in rows of 15, with the default and folder icons first.
+Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; filenames without `.svg` declare space-separated aliases. Icons in these folders must stay legible on light and dark backgrounds, and `dark/` holds dark mode variants for icons that need them. Categories are `default`, `extensions`, `files`, `folders`, and `languages`. Builds use these SVGs directly and regenerate the transparent `preview.png`, showing unique shared icons in rows of 15, with the default and folder icons first.
 
 ```sh
 bun install

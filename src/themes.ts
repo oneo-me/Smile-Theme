@@ -23,9 +23,10 @@ function vscodeAssociations(a: Associations) {
 }
 
 export function vscodeTheme(assets: Asset[]) {
+  // VS Code uses the base associations for dark themes and the `light` block for light themes.
   return {
     iconDefinitions: Object.fromEntries(assets.map(asset => [asset.path, { iconPath: path(asset.path) }])),
-    ...vscodeAssociations(associations(assets, false, true)),
-    light: vscodeAssociations(associations(assets, true, true)),
+    ...vscodeAssociations(associations(assets, true, true)),
+    light: vscodeAssociations(associations(assets, false, true)),
   };
 }

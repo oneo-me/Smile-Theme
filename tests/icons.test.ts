@@ -18,7 +18,7 @@ describe("resource naming and validation", () => {
     expect(parseAsset("folders/.git_expanded.svg").names).toEqual([".git_expanded"]);
   });
   test("rejects invalid layout, traversal, formats and default names", () => {
-    for (const path of ["other/file.svg", "default/unknown.svg", "files/../file.svg", "files/light/../x.svg", "extensions/.js.svg", "files/x.jpg", "files/.svg"]) {
+    for (const path of ["other/file.svg", "default/unknown.svg", "files/../file.svg", "files/dark/../x.svg", "extensions/.js.svg", "files/x.jpg", "files/.svg", "languages/light/java.svg"]) {
       expect(() => parseAsset(path)).toThrow();
     }
   });
@@ -36,14 +36,14 @@ describe("resource naming and validation", () => {
       LICENSE: "files/license license.txt LICENSE.svg",
     });
   });
-  test("requires defaults and a common fallback for light assets", () => {
+  test("requires defaults and a common fallback for dark assets", () => {
     expect(() => validateCatalog(assets(["default/file.svg"]))).toThrow("Missing");
-    expect(() => validateCatalog(assets([...basic, "languages/light/java.svg"]))).toThrow("fallback");
+    expect(() => validateCatalog(assets([...basic, "languages/dark/java.svg"]))).toThrow("fallback");
   });
   test("overrides individual aliases and retains other common icons", () => {
-    const a = assets([...basic, "extensions/js jsx.svg", "extensions/light/js.svg"]);
+    const a = assets([...basic, "extensions/js jsx.svg", "extensions/dark/js.svg"]);
     validateCatalog(a);
-    expect(associations(a, true).extensions).toEqual({ js: "extensions/light/js.svg", jsx: "extensions/js jsx.svg" });
+    expect(associations(a, true).extensions).toEqual({ js: "extensions/dark/js.svg", jsx: "extensions/js jsx.svg" });
     expect(associations(a, false).extensions.js).toBe("extensions/js jsx.svg");
   });
   test("rejects Git LFS pointers before packaging broken icons", async () => {
@@ -59,38 +59,46 @@ describe("resource naming and validation", () => {
 });
 
 describe("VS Code theme", () => {
-  test("VS Code folds path aliases before light overrides, independent of alias order", () => {
+  test("VS Code folds path aliases before dark overrides, independent of alias order", () => {
     for (const names of ["license LICENSE", "LICENSE license"]) {
-      const a = assets([...basic, `files/${names}.svg`, "files/light/license.svg",
-        "folders/src SRC.svg", "folders/light/src.svg", "extensions/txt TXT.svg", "extensions/light/txt.svg"]);
+      const a = assets([...basic, `files/${names}.svg`, "files/dark/license.svg",
+        "folders/src SRC.svg", "folders/dark/src.svg", "extensions/txt TXT.svg", "extensions/dark/txt.svg"]);
       validateCatalog(a);
       const vscode = vscodeTheme(a);
-      expect(vscode.fileNames).toEqual({ license: `files/${names}.svg` });
-      expect(vscode.light.fileNames).toEqual({ license: "files/light/license.svg" });
-      expect(vscode.light.folderNames).toEqual({ src: "folders/light/src.svg" });
+      expect(vscode.fileNames).toEqual({ license: "files/dark/license.svg" });
+      expect(vscode.folderNames).toEqual({ src: "folders/dark/src.svg" });
+      expect(vscode.fileExtensions).toEqual({ txt: "extensions/dark/txt.svg" });
+      expect(vscode.light.fileNames).toEqual({ license: `files/${names}.svg` });
+      expect(vscode.light.folderNames).toEqual({ src: "folders/src SRC.svg" });
       expect(vscode.light.folderNamesExpanded).toEqual(vscode.light.folderNames);
-      expect(vscode.light.fileExtensions).toEqual({ txt: "extensions/light/txt.svg" });
+      expect(vscode.light.fileExtensions).toEqual({ txt: "extensions/txt TXT.svg" });
     }
   });
-  test("VS Code light mode replaces all supported categories", () => {
-    const a = assets([...basic, "default/light/file.svg", "default/project.svg", "default/project_expanded.svg",
-      "languages/bat shellscript.svg", "languages/light/bat shellscript.svg", "languages/typescript.svg",
-      "extensions/hs lhs.svg", "extensions/light/hs lhs.svg", "files/yarn.lock.svg", "files/light/yarn.lock.svg",
-      "folders/.git.svg", "folders/.git_expanded.svg", "folders/light/.git_expanded.svg"]);
+  test("VS Code dark mode replaces all supported categories", () => {
+    const a = assets([...basic, "default/dark/file.svg", "default/project.svg", "default/project_expanded.svg",
+      "languages/bat shellscript.svg", "languages/dark/bat shellscript.svg", "languages/typescript.svg",
+      "extensions/hs lhs.svg", "extensions/dark/hs lhs.svg", "files/yarn.lock.svg", "files/dark/yarn.lock.svg",
+      "folders/.git.svg", "folders/.git_expanded.svg", "folders/dark/.git_expanded.svg"]);
     validateCatalog(a);
     const t = vscodeTheme(a);
     expect(t.rootFolderExpanded).toBe("default/project_expanded.svg");
-    expect(t.light.file).toBe("default/light/file.svg");
-    expect(t.light.languageIds.shellscript).toBe("languages/light/bat shellscript.svg");
+    expect(t.file).toBe("default/dark/file.svg");
+    expect(t.languageIds.shellscript).toBe("languages/dark/bat shellscript.svg");
+    expect(t.languageIds.typescript).toBe("languages/typescript.svg");
+    expect(t.fileExtensions.hs).toBe("extensions/dark/hs lhs.svg");
+    expect(t.fileNames["yarn.lock"]).toBe("files/dark/yarn.lock.svg");
+    expect(t.folderNamesExpanded[".git"]).toBe("folders/dark/.git_expanded.svg");
+    expect(t.folderNames[".git"]).toBe("folders/.git.svg");
+    expect(t.light.file).toBe("default/file.svg");
+    expect(t.light.languageIds.shellscript).toBe("languages/bat shellscript.svg");
     expect(t.light.languageIds.typescript).toBe(t.languageIds.typescript);
-    expect(t.light.fileExtensions.hs).toBe("extensions/light/hs lhs.svg");
-    expect(t.light.fileNames["yarn.lock"]).toBe("files/light/yarn.lock.svg");
-    expect(t.light.folderNamesExpanded[".git"]).toBe("folders/light/.git_expanded.svg");
-    expect(t.light.folderNames[".git"]).toBe("folders/.git.svg");
+    expect(t.light.fileExtensions.hs).toBe("extensions/hs lhs.svg");
+    expect(t.light.fileNames["yarn.lock"]).toBe("files/yarn.lock.svg");
+    expect(t.light.folderNamesExpanded[".git"]).toBe("folders/.git_expanded.svg");
   });
   test("folder expansion falls back to the named closed icon", () => {
-    const a = assets([...basic, "folders/src.svg", "folders/light/src.svg"]);
-    expect(vscodeTheme(a).light.folderNamesExpanded.src).toBe("folders/light/src.svg");
+    const a = assets([...basic, "folders/src.svg", "folders/dark/src.svg"]);
+    expect(vscodeTheme(a).folderNamesExpanded.src).toBe("folders/dark/src.svg");
   });
 });
 
@@ -164,7 +172,8 @@ describe("real project integration", () => {
     const { iconDefinitions, ...associations } = theme;
     checkReferences(associations);
     for (const id of ["powershell", "diff", "shaderlab", "shellscript", "bat"]) {
-      expect(theme.light.languageIds[id]).toContain("/light/");
+      expect(theme.languageIds[id]).toContain("/dark/");
+      expect(theme.light.languageIds[id]).not.toContain("/dark/");
     }
     expect(theme.fileNames["yarn.lock"]).toBeDefined();
   });

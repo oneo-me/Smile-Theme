@@ -17,7 +17,7 @@ export async function renderPreviewImage(assets: Asset[], source: string): Promi
   const ordered = [...assets].sort((a, b) =>
     previewOrder(a) - previewOrder(b) || (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
   for (const asset of ordered) {
-    if (asset.light) continue;
+    if (asset.dark) continue;
     const { data, info } = await sharp(join(source, asset.path), { density: asset.path.endsWith(".svg") ? 216 : 72 })
       .toColourspace("srgb").ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     for (let offset = 0; offset < data.length; offset += 4) {
