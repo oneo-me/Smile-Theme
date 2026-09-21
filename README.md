@@ -26,8 +26,6 @@ In VS Code, run **Preferences: File Icon Theme** from the Command Palette and se
 
 Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; filenames without `.svg` declare space-separated aliases, and `light/` contains light mode variants. Categories are `default`, `extensions`, `files`, `folders`, and `languages`. Builds use these SVGs directly and regenerate the transparent `preview.png`, showing unique common icons in rows of 15.
 
-Maintain the extension logo in `icon.svg`. Packaging generates a PNG logo for the Marketplace, which does not accept SVG extension logos; Generated PNG logos live only in `dist/` and are not tracked. Builds do not require Sketch.
-
 ```sh
 bun install
 bun run build          # Build the extension in dist/vscode
