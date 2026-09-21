@@ -8,3 +8,16 @@
 - Refine the Rust icon and the collapsed and expanded project folder icons.
 - Refine light mode icons for default files, plain text, batch and shell scripts, diffs, and shaders.
 - Include this changelog in the VS Code extension package.
+
+## 2.0.0
+
+Smile Theme is now Smile Icons, focused on file and folder icons for VS Code.
+
+- Removed editor color themes: Smile Light and Smile Dark are no longer included. Pair the icons with your preferred color theme.
+- Improved icon associations: Match icons by file extension, filename, folder name, and language.
+- Light mode variants: Selected icons automatically adapt to light color themes.
+- Expanded folder icons: Support expanded states for folders and workspace roots, with fallback icons.
+- Updated development workflow: Built with Bun and TypeScript, with automated Sketch exports, builds, and packaging.
+- Improved documentation: English and Chinese guides, plus an automatically generated icon preview.
+
+After updating, select **Smile Icons** under **Preferences: File Icon Theme**. If you previously used Smile Light or Smile Dark, select another editor color theme.
