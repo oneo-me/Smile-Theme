@@ -1,12 +1,22 @@
 import { createHash } from "node:crypto";
 import { join } from "node:path";
 import sharp from "sharp";
-import type { Asset } from "./catalog";
+import type { Asset, Category } from "./catalog";
+
+// The preview opens with the default and folder icons, which show the theme's style
+// most directly; the remaining categories follow in their catalog order.
+const leadingCategories: readonly Category[] = ["default", "folders"];
+const previewOrder = (asset: Asset) => {
+  const index = leadingCategories.indexOf(asset.category);
+  return index === -1 ? leadingCategories.length : index;
+};
 
 export async function renderPreviewImage(assets: Asset[], source: string): Promise<Buffer> {
   const icons: { input: Buffer; width: number; height: number }[] = [];
   const seen = new Set<string>();
-  for (const asset of [...assets].sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)) {
+  const ordered = [...assets].sort((a, b) =>
+    previewOrder(a) - previewOrder(b) || (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
+  for (const asset of ordered) {
     if (asset.light) continue;
     const { data, info } = await sharp(join(source, asset.path), { density: asset.path.endsWith(".svg") ? 216 : 72 })
       .toColourspace("srgb").ensureAlpha().raw().toBuffer({ resolveWithObject: true });
