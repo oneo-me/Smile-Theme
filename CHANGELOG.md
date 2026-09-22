@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0
+
+- Add `.zed` folder icons for the collapsed and expanded states.
+- Ship the icon theme for Zed as well, from the same SVG sources, with a dark and a light theme that Zed picks by appearance.
+- Match Zed icons by full file name, by suffix after stripping leading dot segments, and by folder name, so the extensions, file names, folders, and languages the icon set declares resolve there too.
+- Zed has no workspace root icon slot, so the project icons stay VS Code-only.
+- Fix the missing README logo on the Marketplace by generating the logo at the extension package root and committing it to the repository, where the Marketplace loads images from.
+
 ## 2.1.0
 
 - Add a dedicated icon for `CLAUDE.md` and `CLAUDE.local.md` files.
