@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.svg" alt="Smile Icons" width="128" height="128">
+  <img src="icon.png" alt="Smile Icons" width="128" height="128">
 </p>
 
 # Smile Icons

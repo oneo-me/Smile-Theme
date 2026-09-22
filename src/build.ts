@@ -4,7 +4,6 @@ import type { Asset } from "./catalog";
 import { readCatalog } from "./catalog";
 import { metadata, output, root, source } from "./config";
 import { vscodeTheme } from "./themes";
-import sharp from "sharp";
 import { generatePreview } from "./preview";
 import { renderPreviewImage } from "./preview-image";
 import { unreferencedIcons, zedExtensionId, zedExtensionManifest, zedIconThemeFamily, zedIconThemePath } from "./zed";
@@ -15,7 +14,6 @@ export async function build(destination = output) {
   const assets = await compileExtensions(destination);
   await compileZedExtension(assets, destination);
   await copyFile(join(destination, "vscode/preview.png"), join(root, "preview.png"));
-  await copyFile(join(destination, "vscode/icon.png"), join(root, "icon.png"));
 }
 
 export async function compileExtensions(destination = output) {
@@ -29,14 +27,9 @@ export async function compileExtensions(destination = output) {
     await mkdir(dirname(to), { recursive: true });
     await copyFile(join(source, asset.path), to);
   }
-  for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"]) {
-    if (path.startsWith("README")) {
-      await Bun.write(join(directory, path), (await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="icon.png"'));
-    } else {
-      await copyFile(join(root, path), join(directory, path));
-    }
+  for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE", "icon.png"]) {
+    await copyFile(join(root, path), join(directory, path));
   }
-  await sharp(join(root, "icon.svg")).resize(512, 512).png().toFile(join(directory, "icon.png"));
   await Bun.write(join(directory, "preview.png"), await renderPreviewImage(assets, source));
   await Bun.write(join(destination, "vscode/package.json"), json({
     name: metadata.name,
@@ -62,6 +55,7 @@ export async function compileZedExtension(assets: Asset[], destination = output)
   const directory = join(destination, "zed");
   await rm(directory, { recursive: true, force: true });
   await mkdir(join(directory, "icon_themes"), { recursive: true });
+  await copyFile(join(root, "icon.png"), join(directory, "icon.png"));
   for (const asset of assets) {
     const to = join(directory, "icons", asset.path);
     await mkdir(dirname(to), { recursive: true });

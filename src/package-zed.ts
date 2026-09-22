@@ -10,7 +10,7 @@ const archive = join(output, `${zedExtensionId}-${metadata.version}.tar.gz`);
 const child = Bun.spawn([
   "tar", "-czf", archive,
   "-C", join(output, "zed"),
-  "extension.toml", "icon_themes", "icons",
+  "extension.toml", "icon_themes", "icons", "icon.png",
 ], { stdout: "inherit", stderr: "inherit" });
 process.exitCode = await child.exited;
 if (!process.exitCode) console.log(`Packaged Zed extension → ${archive}`);

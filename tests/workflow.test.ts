@@ -8,7 +8,7 @@ let directory: string;
 
 beforeEach(async () => {
   directory = await mkdtemp(join(tmpdir(), "smile-workflow-"));
-  for (const path of ["src", "package.json", "icons", "icon.svg", "LICENSE", "README.md", "README.zh-CN.md", "CHANGELOG.md"]) {
+  for (const path of ["src", "package.json", "icons", "icon.png", "LICENSE", "README.md", "README.zh-CN.md", "CHANGELOG.md"]) {
     await cp(join(root, path), join(directory, path), { recursive: true });
   }
   await symlink(join(root, "node_modules"), join(directory, "node_modules"));
@@ -26,13 +26,15 @@ function run(script: string) {
 }
 
 test("build uses SVG sources without Sketch and preserves output on invalid input", async () => {
+  const icon = await Bun.file(join(directory, "icon.png")).bytes();
   const original = await Bun.file(join(directory, "icons/languages/java.svg")).bytes();
   const child = run("build");
   const errors = await new Response(child.stderr).text();
   expect(await child.exited, errors).toBe(0);
   const preview = await Bun.file(join(directory, "preview.png")).bytes();
   expect(await Bun.file(join(directory, "dist/vscode/preview.png")).bytes()).toEqual(preview);
-  const icon = await Bun.file(join(directory, "icon.png")).bytes();
+  expect(await Bun.file(join(directory, "icon.png")).bytes()).toEqual(icon);
+  expect(await Bun.file(join(directory, "dist/zed/icon.png")).bytes()).toEqual(icon);
   expect(await Bun.file(join(directory, "dist/vscode/icon.png")).bytes()).toEqual(icon);
   expect(await Bun.file(join(directory, "dist/vscode/icons/languages/java.svg")).bytes()).toEqual(original);
   await Bun.write(join(directory, "icons/languages/java.svg"), "broken");

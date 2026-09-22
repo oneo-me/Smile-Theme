@@ -86,7 +86,7 @@ describe("real project integration", () => {
   afterAll(async () => { await rm(destination, { recursive: true, force: true }); });
 
   test("writes a manifest, one theme family and the icon assets", async () => {
-    expect((await readdir(destination)).sort()).toEqual(["extension.toml", "icon_themes", "icons"]);
+    expect((await readdir(destination)).sort()).toEqual(["extension.toml", "icon.png", "icon_themes", "icons"]);
     const manifest = await Bun.file(join(destination, "extension.toml")).text();
     for (const line of [
       `id = "smile-icons"`,
