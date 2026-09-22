@@ -8,6 +8,7 @@ export const metadata = {
   version: pkg.version,
   name: "smile-theme",
   publisher: "oneo",
+  author: "ONEO <x@oneo.me>",
   label: "Smile Icons",
   repository: "https://github.com/oneo-me/Smile-Theme",
 };

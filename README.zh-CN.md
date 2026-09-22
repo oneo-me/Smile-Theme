@@ -28,8 +28,9 @@ code --install-extension oneo.smile-theme
 
 ```sh
 bun install
-bun run build          # 构建扩展到 dist/vscode
-bun run package:vscode # 构建并打包扩展到 dist/
+bun run build          # 构建两个扩展到 dist/
+bun run package:vscode # 构建并打包 VS Code 扩展到 dist/
+bun run package:zed    # 构建并打包 Zed 图标主题到 dist/
 ```
 
 开发时在 VS Code 中按 F5 构建并打开图标预览工作区。运行 `bun run check` 和 `bun test` 检查项目。
