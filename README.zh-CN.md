@@ -42,6 +42,7 @@ bun run build
 ```sh
 bun install
 bun run build          # 构建两个扩展到 dist/
+bun run package        # 构建并打包两个扩展的安装包到 dist/
 bun run package:vscode # 构建并打包 VS Code 扩展到 dist/
 bun run package:zed    # 构建并打包 Zed 图标主题到 dist/
 ```

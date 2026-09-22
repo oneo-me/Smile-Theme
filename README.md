@@ -42,6 +42,7 @@ Requires Bun 1.4.2 or later. Edit SVG files directly in `icons/<category>/`; fil
 ```sh
 bun install
 bun run build          # Build both extensions in dist/
+bun run package        # Build and package both extensions into dist/
 bun run package:vscode # Build and package the VS Code extension into dist/
 bun run package:zed    # Build and package the Zed icon theme into dist/
 ```

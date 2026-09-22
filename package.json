@@ -9,6 +9,7 @@
     "build": "bun src/build.ts",
     "check": "tsc --noEmit",
     "test": "bun test",
+    "package": "bun src/package.ts",
     "package:vscode": "bun src/package-vscode.ts",
     "package:zed": "bun src/package-zed.ts"
   },
