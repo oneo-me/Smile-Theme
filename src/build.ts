@@ -10,6 +10,7 @@ import { renderPreviewImage } from "./preview-image";
 export async function build(destination = output) {
   await compileExtensions(destination);
   await copyFile(join(destination, "vscode/preview.png"), join(root, "preview.png"));
+  await copyFile(join(destination, "vscode/icon.png"), join(root, "icon.png"));
 }
 
 export async function compileExtensions(destination = output) {
@@ -23,15 +24,14 @@ export async function compileExtensions(destination = output) {
     await mkdir(dirname(to), { recursive: true });
     await copyFile(join(source, asset.path), to);
   }
-  await mkdir(join(directory, "extension"), { recursive: true });
   for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"]) {
     if (path.startsWith("README")) {
-      await Bun.write(join(directory, path), (await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="extension/icon.png"'));
+      await Bun.write(join(directory, path), (await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="icon.png"'));
     } else {
       await copyFile(join(root, path), join(directory, path));
     }
   }
-  await sharp(join(root, "icon.svg")).resize(512, 512).png().toFile(join(directory, "extension/icon.png"));
+  await sharp(join(root, "icon.svg")).resize(512, 512).png().toFile(join(directory, "icon.png"));
   await Bun.write(join(directory, "preview.png"), await renderPreviewImage(assets, source));
   const json = (value: unknown) => JSON.stringify(value, null, 2) + "\n";
   await Bun.write(join(destination, "vscode/package.json"), json({
@@ -43,8 +43,8 @@ export async function compileExtensions(destination = output) {
     license: "MIT",
     engines: { vscode: "^1.80.0" },
     categories: ["Themes"],
-    icon: "extension/icon.png",
-    files: ["icons/**", "icons.json", "extension/icon.png", "preview.png", "README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"],
+    icon: "icon.png",
+    files: ["icons/**", "icons.json", "icon.png", "preview.png", "README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"],
     repository: { type: "git", url: metadata.repository },
     contributes: { iconThemes: [{ id: "smile-icons", label: metadata.label, path: "./icons.json" }] },
   }));

@@ -32,6 +32,8 @@ test("build uses SVG sources without Sketch and preserves output on invalid inpu
   expect(await child.exited, errors).toBe(0);
   const preview = await Bun.file(join(directory, "preview.png")).bytes();
   expect(await Bun.file(join(directory, "dist/vscode/preview.png")).bytes()).toEqual(preview);
+  const icon = await Bun.file(join(directory, "icon.png")).bytes();
+  expect(await Bun.file(join(directory, "dist/vscode/icon.png")).bytes()).toEqual(icon);
   expect(await Bun.file(join(directory, "dist/vscode/icons/languages/java.svg")).bytes()).toEqual(original);
   await Bun.write(join(directory, "icons/languages/java.svg"), "broken");
   const failed = run("build");
@@ -39,5 +41,6 @@ test("build uses SVG sources without Sketch and preserves output on invalid inpu
   expect(await failed.exited).not.toBe(0);
   expect(failedError).toContain("Invalid SVG");
   expect(await Bun.file(join(directory, "preview.png")).bytes()).toEqual(preview);
+  expect(await Bun.file(join(directory, "icon.png")).bytes()).toEqual(icon);
   expect(await Bun.file(join(directory, "dist/vscode/icons/languages/java.svg")).bytes()).toEqual(original);
 });

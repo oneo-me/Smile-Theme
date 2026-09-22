@@ -182,11 +182,16 @@ describe("real project integration", () => {
     const directory = join(destination, "vscode");
     const manifest = await Bun.file(join(directory, "package.json")).json();
     for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md", "LICENSE"]) {
-      expect(await Bun.file(join(directory, path)).text()).toBe((await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="extension/icon.png"'));
+      expect(await Bun.file(join(directory, path)).text()).toBe((await Bun.file(join(root, path)).text()).replaceAll('src="icon.svg"', 'src="icon.png"'));
       expect(manifest.files).toContain(path);
     }
     expect(await Bun.file(join(directory, manifest.icon)).exists()).toBe(true);
     expect(manifest.files).toContain("preview.png");
+    expect(manifest.files).toContain("icon.png");
+    expect(await Bun.file(join(root, "icon.png")).exists()).toBe(true);
+    for (const path of ["README.md", "README.zh-CN.md"]) {
+      expect(await Bun.file(join(directory, path)).text()).not.toMatch(/src="[^"]+\.svg"/);
+    }
     for (const path of ["README.md", "README.zh-CN.md", "CHANGELOG.md"]) {
       const text = await Bun.file(join(directory, path)).text();
       for (const match of text.matchAll(/\]\(([^)]+)\)|src="([^"]+)"/g)) {
