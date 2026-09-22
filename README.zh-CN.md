@@ -6,11 +6,13 @@
 
 [English](README.md) | 简体中文
 
-为 VS Code 提供文件和目录图标，直接维护 SVG 源文件，支持浅色模式图标。2.0 仅包含图标，不提供编辑器配色主题。
+为 VS Code 与 Zed 提供文件和目录图标，直接维护 SVG 源文件，支持浅色模式图标。2.0 仅包含图标，不提供编辑器配色主题。
 
 ![Smile Icons 预览](preview.png)
 
 ## 安装
+
+### VS Code
 
 在 VS Code 扩展面板中搜索 `oneo.smile-theme`，找到 [Smile Icons](https://marketplace.visualstudio.com/items?itemName=oneo.smile-theme) 并安装，也可以运行以下命令：
 
@@ -19,6 +21,17 @@ code --install-extension oneo.smile-theme
 ```
 
 在 VS Code 命令面板中运行 **首选项: 文件图标主题**（Preferences: File Icon Theme），选择 **Smile Icons**。
+
+### Zed
+
+Zed 扩展尚未上架扩展市场，需要从本地构建安装。克隆仓库后先构建，需要 Bun 1.4.2 或更新版本：
+
+```sh
+bun install
+bun run build
+```
+
+在 Zed 的扩展面板点击 **Install Dev Extension**，或在命令面板运行 `zed: install dev extension`，选择 `dist/zed`。随后运行 `icon theme selector: toggle` 并选择 **Smile Icons**，深色与浅色变体跟随编辑器外观切换。
 
 ## 参与开发
 

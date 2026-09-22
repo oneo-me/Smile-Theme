@@ -6,11 +6,13 @@
 
 English | [简体中文](README.zh-CN.md)
 
-File and folder icons for VS Code, maintained as SVG, with light mode variants. Version 2.0 includes icons only, without editor color themes.
+File and folder icons for VS Code and Zed, maintained as SVG, with light mode variants. Version 2.0 includes icons only, without editor color themes.
 
 ![Smile Icons preview](preview.png)
 
 ## Installation
+
+### VS Code
 
 In VS Code, open the Extensions view, search for `oneo.smile-theme`, and install [Smile Icons](https://marketplace.visualstudio.com/items?itemName=oneo.smile-theme). Alternatively, run:
 
@@ -19,6 +21,17 @@ code --install-extension oneo.smile-theme
 ```
 
 In VS Code, run **Preferences: File Icon Theme** from the Command Palette and select **Smile Icons**.
+
+### Zed
+
+Smile Icons is not in the Zed extension registry yet, so it is installed from a local build. Build a checkout first, which requires Bun 1.4.2 or later:
+
+```sh
+bun install
+bun run build
+```
+
+In Zed, open the extensions page and click **Install Dev Extension**, or run `zed: install dev extension` from the Command Palette, and select `dist/zed`. Then run `icon theme selector: toggle` and select **Smile Icons**; the dark and light variants follow the editor appearance.
 
 ## Contributing
 
