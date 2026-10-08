@@ -1,6 +1,5 @@
 .DS_Store
 Thumbs.db
-AGENTS.md
 node_modules/
 dist/
 *.vsix

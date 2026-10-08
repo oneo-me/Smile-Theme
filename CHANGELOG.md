@@ -1,5 +1,10 @@
 # Changelog
 
+Release notes for users of Smile Icons for VS Code and Zed. Both packages share
+one version; editor-specific changes are identified in their entries.
+
+## [Unreleased]
+
 ## 2.2.0
 
 - Add `.zed` folder icons for the collapsed and expanded states.
