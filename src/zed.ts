@@ -65,7 +65,7 @@ const languageAssociations: Record<string, { stems?: string[]; suffixes?: string
   typescript: { suffixes: ["ts", "cts", "mts"] },
   typescriptreact: { suffixes: ["tsx"] },
   vb: { suffixes: ["vb", "vbs", "bas", "cls", "frm"] },
-  xml: { suffixes: ["xml", "xsl", "xslt", "xsd", "dtd", "plist"] },
+  xml: { suffixes: ["xml", "xsl", "xslt", "xsd", "dtd"] },
   xquery: { suffixes: ["xq", "xquery", "xqy"] },
   yaml: { suffixes: ["yaml", "yml"] },
 };

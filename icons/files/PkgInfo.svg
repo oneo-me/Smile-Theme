@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+    <title>PkgInfo</title>
+    <path d="M17 0H59.929A5 5 0 0 1 63.464 1.464L70.536 8.536A5 5 0 0 1 72 12.071V43A5 5 0 0 1 67 48H17A5 5 0 0 1 12 43V5A5 5 0 0 1 17 0Z" fill="#B45309"/>
+    <path d="m42 6 18 9v19l-18 9-18-9V15Z" fill="#FFFBEB"/>
+    <path d="m42 24 18-9v19l-18 9Z" fill="#FDE68A"/>
+    <path d="m32 11 4-2 18 9-4 2Z" fill="#D97706"/>
+    <path d="m50 20 4-2v9l-4 2Z" fill="#D97706"/>
+    <path d="m24 15 18 9 18-9M42 24v19" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/>
+</svg>

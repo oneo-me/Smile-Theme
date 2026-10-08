@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+    <title>dylib</title>
+    <path d="M17 0H59.929A5 5 0 0 1 63.464 1.464L70.536 8.536A5 5 0 0 1 72 12.071V43A5 5 0 0 1 67 48H17A5 5 0 0 1 12 43V5A5 5 0 0 1 17 0Z" fill="#7C3AED"/>
+    <g fill="none" stroke="#F5F3FF" stroke-width="5"><rect x="24" y="10" width="24" height="17" rx="7" transform="rotate(-35 36 18.5)"/><rect x="36" y="21" width="24" height="17" rx="7" transform="rotate(-35 48 29.5)"/></g>
+</svg>

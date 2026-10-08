@@ -5,6 +5,11 @@ one version; editor-specific changes are identified in their entries.
 
 ## [Unreleased]
 
+## 2.3.0
+
+- Add explicit Go icons for `go.mod` and `go.sum` in VS Code and Zed.
+- Add icons for macOS disk images (`.dmg`), dynamic libraries (`.dylib`), property lists (`.plist`), and app bundle files (`CodeResources`, `Assets.car`, `PkgInfo`) in VS Code and Zed.
+
 ## 2.2.0
 
 - Add `.zed` folder icons for the collapsed and expanded states.

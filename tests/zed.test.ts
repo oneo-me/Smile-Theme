@@ -133,6 +133,33 @@ describe("real project integration", () => {
     expect(light.file_icons.default.path).toBe("./icons/default/file.svg");
   });
 
+  test("Go module filenames and disk image suffixes resolve in both appearances", async () => {
+    const family = zedIconThemeFamily(catalog, "Smile Icons", "ONEO");
+    for (const theme of family.themes) {
+      for (const name of ["go.mod", "go.sum"]) {
+        expect(theme.file_icons[theme.file_stems[name]!]!.path).toBe("./icons/files/go.mod go.sum.svg");
+      }
+      expect(theme.file_suffixes.go).toBe("languages/go");
+      expect(theme.file_icons[theme.file_suffixes.dmg!]!.path).toBe("./icons/extensions/dmg.svg");
+    }
+  });
+
+  test("macOS bundle files and suffixes resolve without replacing XML coverage", () => {
+    const family = zedIconThemeFamily(catalog, "Smile Icons", "ONEO");
+    for (const theme of family.themes) {
+      for (const name of ["CodeResources", "Assets.car", "PkgInfo"]) {
+        expect(theme.file_icons[theme.file_stems[name]!]!.path).toBe(`./icons/files/${name}.svg`);
+      }
+      for (const suffix of ["dylib", "plist"]) {
+        expect(theme.file_icons[theme.file_suffixes[suffix]!]!.path).toBe(`./icons/extensions/${suffix}.svg`);
+      }
+      expect(theme.file_suffixes.car).toBeUndefined();
+      for (const suffix of ["xml", "xsl", "xslt", "xsd", "dtd"]) {
+        expect(theme.file_suffixes[suffix]).toBe("languages/xml");
+      }
+    }
+  });
+
   test("reports the icons no file association can reach", async () => {
     const family = await Bun.file(join(destination, zedIconThemePath)).json();
     expect(unreferencedIcons(family.themes[0])).toEqual([

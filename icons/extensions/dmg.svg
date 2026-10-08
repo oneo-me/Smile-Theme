@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+    <title>dmg</title>
+    <path d="M17 0H59.929A5 5 0 0 1 63.464 1.464L70.536 8.536A5 5 0 0 1 72 12.071V43A5 5 0 0 1 67 48H17A5 5 0 0 1 12 43V5A5 5 0 0 1 17 0Z" fill="#64748B"/>
+    <rect x="23" y="7" width="38" height="34" rx="5" fill="#F1F5F9"/>
+    <circle cx="42" cy="21" r="10" fill="#94A3B8"/>
+    <circle cx="42" cy="21" r="4" fill="#F1F5F9"/>
+    <path d="M28 34H48" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="55" cy="34" r="2" fill="#0F766E"/>
+</svg>

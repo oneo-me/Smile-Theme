@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+    <title>Assets.car</title>
+    <path d="M17 0H59.929A5 5 0 0 1 63.464 1.464L70.536 8.536A5 5 0 0 1 72 12.071V43A5 5 0 0 1 67 48H17A5 5 0 0 1 12 43V5A5 5 0 0 1 17 0Z" fill="#DB2777"/>
+    <rect x="22" y="8" width="28" height="28" rx="4" fill="#FBCFE8"/><rect x="30" y="15" width="31" height="26" rx="4" fill="#FFF1F2" stroke="#DB2777" stroke-width="2"/><circle cx="51" cy="22" r="3" fill="#DB2777"/><path d="m34 36 8-10 7 8 4-4 5 6Z" fill="#DB2777"/>
+</svg>

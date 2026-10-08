@@ -59,6 +59,29 @@ describe("resource naming and validation", () => {
 });
 
 describe("VS Code theme", () => {
+  test("Go module files and disk images resolve in both appearances", async () => {
+    const theme = vscodeTheme(await readCatalog(source));
+    for (const appearance of [theme, theme.light]) {
+      for (const name of ["go.mod", "go.sum"]) {
+        expect(appearance.fileNames[name]).toBe("files/go.mod go.sum.svg");
+      }
+      expect(appearance.fileExtensions.dmg).toBe("extensions/dmg.svg");
+    }
+  });
+
+  test("macOS bundle files and suffixes resolve in both appearances", async () => {
+    const theme = vscodeTheme(await readCatalog(source));
+    for (const appearance of [theme, theme.light]) {
+      for (const name of ["CodeResources", "Assets.car", "PkgInfo"]) {
+        expect(appearance.fileNames[name.toLowerCase()]).toBe(`files/${name}.svg`);
+      }
+      for (const suffix of ["dylib", "plist"]) {
+        expect(appearance.fileExtensions[suffix]).toBe(`extensions/${suffix}.svg`);
+      }
+      expect(appearance.fileExtensions.car).toBeUndefined();
+    }
+  });
+
   test("VS Code folds path aliases before dark overrides, independent of alias order", () => {
     for (const names of ["license LICENSE", "LICENSE license"]) {
       const a = assets([...basic, `files/${names}.svg`, "files/dark/license.svg",

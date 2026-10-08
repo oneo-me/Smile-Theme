@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="48px" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+    <title>plist</title>
+    <path d="M17 0H59.929A5 5 0 0 1 63.464 1.464L70.536 8.536A5 5 0 0 1 72 12.071V43A5 5 0 0 1 67 48H17A5 5 0 0 1 12 43V5A5 5 0 0 1 17 0Z" fill="#2563EB"/>
+    <g fill="#EFF6FF"><rect x="24" y="10" width="7" height="7" rx="2"/><rect x="24" y="21" width="7" height="7" rx="2"/><rect x="24" y="32" width="7" height="7" rx="2"/></g><path d="M38 13.5h20M38 24.5h15M38 35.5h20" stroke="#EFF6FF" stroke-width="4" stroke-linecap="round"/>
+</svg>

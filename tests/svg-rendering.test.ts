@@ -15,6 +15,15 @@ test("env and license retain visible dashes and gaps along the top border", asyn
   }
 });
 
+test("PkgInfo tape stays solid across the lid and side without background-colored gaps", async () => {
+  const { data, info } = await sharp(join(source, "files/PkgInfo.svg")).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const pixel = (x: number, y: number) => [...data.subarray((y * info.width + x) * 4, (y * info.width + x) * 4 + 4)];
+  for (const [x, y] of [[35, 11], [43, 15], [52, 23]]) {
+    expect(pixel(x!, y!)).toEqual([217, 119, 6, 255]);
+  }
+  expect(pixel(42, 45)).toEqual([180, 83, 9, 255]);
+});
+
 test("node gem highlights stay inside the hexagon despite their transforms", async () => {
   const svg = await Bun.file(join(source, "files/.node-version.svg")).text();
   const defs = svg.match(/<defs>[\s\S]*?<\/defs>/)![0];
